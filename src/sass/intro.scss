@@ -1,0 +1,62 @@
+@import "variables";
+@import "helpers";
+
+%menu-item {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: toRem(20px);
+    line-height: toRem(24px);
+    color: $primary-font-color;
+    text-decoration: none;
+    padding: toRem(10px);
+    margin: toRem(12px);
+    display: inline-block;
+}
+
+.intro {
+    background-image: url('#{$imgs-path}/bg_intro.jpg');
+
+    &__header {
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: toRem(1556px);
+    width: 100%;
+    margin: auto;
+}
+
+.main-menu {
+    &__item {
+        @extend %menu-item;
+    }
+
+    &__item--active, &__item:hover {
+        font-weight: 500;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-color: $primary-color;
+            position: absolute;
+            bottom: toRem(6px);
+            left: toRem(10px);
+            display: block;
+            width: calc(100% - toRem(20px));
+            height: toRem(3px);
+        }
+    }
+}
+
+.auth-menu {
+    &__item {
+        @extend %menu-item;
+    }
+    &__item--btn {
+        border-radius: toRem(12px);
+        background-color: $primary-color;
+        padding: toRem(20px) toRem(32px);
+    }
+}
