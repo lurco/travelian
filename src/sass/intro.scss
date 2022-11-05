@@ -176,3 +176,128 @@
         }
     }
 }
+
+.destinations {
+    &__hdl {}
+    &__subhdl {}
+    &__text {}
+    &__nav {}
+    &__nav-left {}
+    &__nav-right {}
+    &__slider {}
+    &__slide {
+        &-name {}
+        &-localtion {}
+    }
+}
+
+.offer {
+    &__hdl {}
+    &__subhdl {}
+    &__nav {}
+    &__nav-left {}
+    &__nav-right {}
+    &__text {}
+    &__folder {}
+}
+
+.folder {
+    &__photo {}
+    &__content {}
+    &__location {}
+    &__rating {}
+    &__desc {}
+    &__details {}
+}
+
+.details {
+    &__price {}
+    &__btn {}
+}
+
+.blog {
+    &__hdl {}
+    &__subhdl {}
+    &__blog-entry {}
+}
+
+.blog-entry {
+    &__photo {}
+    &__img {}
+    &__content {}
+    &__hdl {}
+    &__text {}
+    &__read-more {}
+}
+
+.planners {
+    &__start {}
+    &__hdl {}
+    &__text {}
+    &__btn {}
+    &__slider {}
+    &__slide-img {}
+}
+
+.gallery {
+    &__hdl {}
+    &__subhdl {}
+    &__text {}
+    &__nav {}
+    &__nav-left {}
+    &__nav-right {}
+}
+
+.testimonial {
+    &__hdl {}
+    &__subhdl {}
+    &__slider {}
+    &__slide {}
+    &__avatar {}
+    &__review {}
+    &__rating {}
+    &__name {}
+    &__title {}
+    &__nav {}
+    &__nav-left {}
+    &__nav-right {}
+}
+
+.newsletter {
+    &__hdl {}
+    &__form {}
+    &__lbl {}
+    &__email {}
+    &__btn {}
+}
+
+.footer {}
+
+.copyright {
+    &__logo {}
+    &__text {}
+}
+
+.footer-logo {
+    &__img {}
+}
+
+.footer-menu {
+    &__hdl {}
+    &__item {}
+}
+
+.footer-info {
+    &__hdl {}
+    &__item {}
+}
+
+.footer-contact {
+    &__hdl {}
+    &__item {}
+}
+
+.footer-social {
+    &__hdl {}
+    &__img {}
+}
