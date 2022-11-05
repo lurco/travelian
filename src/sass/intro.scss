@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: toRem(1556px);
+    max-width: toRem($max-width-px);
     width: 100%;
     margin: auto;
 }
@@ -73,7 +73,7 @@
 
 .lead {
     color: $primary-font-color;
-    max-width: toRem(1556px);
+    max-width: toRem($max-width-px);
     width: 100%;
     margin: auto;
 
@@ -136,7 +136,7 @@
     }
 
     &__input {
-        font-family: "Playfair Display";
+        font-family: 'Playfair Display', serif;
         font-size: toRem(20px);
         font-weight: 400;
         color: $input-font-color;
