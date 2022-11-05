@@ -523,16 +523,20 @@ html, body {
   height: 3.75rem;
 }
 .destinations__slider {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 24.3125rem);
+  grid-template-rows: 41.3125rem;
 }
 .destinations__slide {
   height: 41.125rem;
   width: 31.0625rem;
-  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.destinations__slide-img {
+  width: 100%;
+  height: 100%;
 }
 .destinations__slide-name {
   color: #FFF;
