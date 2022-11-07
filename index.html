@@ -17,8 +17,8 @@
 </head>
 <body>
 
-<section class="intro">
-    <header class="intro__header header">
+<section class="hero">
+    <header class="hero__header header">
         <a href="" class="header__logo logo">
             <img src="./src/images/logo.svg" alt="Travellian logo"
                  class="logo__img"></a>
@@ -69,190 +69,231 @@
 
 </section>
 
-<section class="destinations">
-    <h2 class="destinations__hdl">Popular Destinations</h2>
-    <div class="destinations__subhdl">
-        <h3 class="destinations__text">Most popular destinations around the world, from historical places to natural
-            wonders.</h3>
-        <nav class="destinations__nav">
-            <div class="destinations__nav-left"><img src="src/images/wide_arrow.svg" alt="Left-pointing arrow" class="destinations__img"></div>
-            <div class="destinations__nav-right"><img src="src/images/wide_arrow.svg" alt="Right-pointing arrow" class="destinations__img"></div>
-        </nav>
-    </div>
-    <div class="destinations__slider">
-        <div class="destinations__slide">
-            <img src="src/images/destination1.jpg" alt="" class="destinations__slide-img">
-            <h3 class="destinations__slide-name">Monument of Berlin</h3>
-            <p class="destinations__slide-location">Berlin, Germany</p>
-        </div>
-        <div class="destinations__slide">
-            <img src="src/images/destination2.jpg" alt="" class="destinations__slide-img">
-            <h3 class="destinations__slide-name">Millenium Bridge</h3>
-            <p class="destinations__slide-location">London, United Kingdom</p>
-        </div>
-        <div class="destinations__slide">
-            <img src="src/images/destination3.jpg" alt="" class="destinations__slide-img">
-            <h3 class="destinations__slide-name">Rialto Bridge</h3>
-            <p class="destinations__slide-location">Venice, Italy</p>
-        </div>
-        <div class="destinations__slide">
-            <img src="src/images/destination4.jpg" alt="" class="destinations__slide-img">
-            <h3 class="destinations__slide-name">Sea of Orange Tiles</h3>
-            <p class="destinations__slide-location">Lisbon, Portugal</p>
-        </div>
-    </div>
+<div class="l-grid">
+    <div class="l-grid__item">
+        <section class="destinations">
+            <h2 class="destinations__hdl">Popular Destinations</h2>
 
-</section>
+            <div class="destinations__subhdl-wrapper">
+                <h3 class="destinations__text">Most popular destinations around the world, from historical places to
+                    natural
+                    wonders.</h3>
+                <nav class="carousel-nav">
+                    <div class="carousel-nav__left left-btn"><img src="src/images/wide_arrow.svg"
+                                                                  alt="Left-pointing arrow"
+                                                                  class="left-btn__img"></div>
+                    <div class="carousel-nav__right right-btn"><img src="src/images/wide_arrow.svg"
+                                                                    alt="Right-pointing arrow" class="right-btn__img">
+                    </div>
+                </nav>
+            </div>
 
-<section class="offer">
-    <h2 class="offer__hdl">Special Offer</h2>
-    <div class="offer__subhdl">
-        <nav class="offer__nav">
-            <div class="destinations__nav-left"><img src="src/images/wide_arrow.svg" alt="Left-pointing arrow" class="offer__img"></div>
-                <div class="destinations__nav-right"><img src="src/images/wide_arrow.svg" alt="Right-pointing arrow" class="offer__img"></div>
-        </nav>
-        <h3 class="offer__text">Check out our special offer and discounts</h3>
-    </div>
-    <div class="offer__folder folder">
-        <div class="folder__place">
-            <div class="folder__photo"><img src="src/images/offer1.jpg" alt="" class="folder__img"></div>
-            <div class="folder__content">
-                <h3 class="folder__location">Lisbon, Portugal</h3>
-                <div class="folder__rating"></div>
-                <div class="folder__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
-                    popular during the renaissance. Passage and going through the cities of the world literature.
+            <div class="destinations__carousel carousel">
+                <div class="carousel__carousel-item carousel-item">
+                    <img src="src/images/destination1.jpg" alt="" class="destinations__slide-img">
+                    <h3 class="destinations__slide-name">Monument of Berlin</h3>
+                    <p class="destinations__slide-location">Berlin, Germany</p>
                 </div>
-                <div class="folder__details details"><span class="details__price">&euro;500</span>
-                    <button class="details__btn">Details</button>
+                <div class="destinations__slide">
+                    <img src="src/images/destination2.jpg" alt="" class="destinations__slide-img">
+                    <h3 class="destinations__slide-name">Millenium Bridge</h3>
+                    <p class="destinations__slide-location">London, United Kingdom</p>
+                </div>
+                <div class="destinations__slide">
+                    <img src="src/images/destination3.jpg" alt="" class="destinations__slide-img">
+                    <h3 class="destinations__slide-name">Rialto Bridge</h3>
+                    <p class="destinations__slide-location">Venice, Italy</p>
+                </div>
+                <div class="destinations__slide">
+                    <img src="src/images/destination4.jpg" alt="" class="destinations__slide-img">
+                    <h3 class="destinations__slide-name">Sea of Orange Tiles</h3>
+                    <p class="destinations__slide-location">Lisbon, Portugal</p>
                 </div>
             </div>
-        </div>
-        <div class="folder__place">
-            <div class="folder__photo"></div>
-            <div class="folder__content">
-                <h3 class="folder__location">Athens, Greece</h3>
-                <div class="folder__rating"></div>
-                <div class="folder__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
-                    popular during the renaissance. Passage and going through the cities of the world literature.
+
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="offer">
+            <h2 class="offer__hdl">Special Offer</h2>
+            <div class="offer__subhdl">
+                <nav class="offer__nav">
+                    <div class="destinations__nav-left"><img src="src/images/wide_arrow.svg" alt="Left-pointing arrow"
+                                                             class="offer__img"></div>
+                    <div class="destinations__nav-right"><img src="src/images/wide_arrow.svg" alt="Right-pointing arrow"
+                                                              class="offer__img"></div>
+                </nav>
+                <h3 class="offer__text">Check out our special offer and discounts</h3>
+            </div>
+            <div class="offer__folder folder">
+                <div class="folder__place">
+                    <div class="folder__photo"><img src="src/images/offer1.jpg" alt="" class="folder__img"></div>
+                    <div class="folder__content">
+                        <h3 class="folder__location">Lisbon, Portugal</h3>
+                        <div class="folder__rating"></div>
+                        <div class="folder__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+                            Very
+                            popular during the renaissance. Passage and going through the cities of the world
+                            literature.
+                        </div>
+                        <div class="folder__details details"><span class="details__price">&euro;500</span>
+                            <button class="details__btn">Details</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="folder__details details"><span class="details__price">&euro;800</span>
-                    <button class="details__btn">Details</button>
+                <div class="folder__place">
+                    <div class="folder__photo"></div>
+                    <div class="folder__content">
+                        <h3 class="folder__location">Athens, Greece</h3>
+                        <div class="folder__rating"></div>
+                        <div class="folder__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+                            Very
+                            popular during the renaissance. Passage and going through the cities of the world
+                            literature.
+                        </div>
+                        <div class="folder__details details"><span class="details__price">&euro;800</span>
+                            <button class="details__btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="folder__place">
+                    <div class="folder__photo"><img src="src/images/offer1.jpg" alt="" class="folder__img"></div>
+                    <div class="folder__content">
+                        <h3 class="folder__location">Rome, Italy</h3>
+                        <div class="folder__rating"></div>
+                        <div class="folder__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+                            Very
+                            popular during the renaissance. Passage and going through the cities of the world
+                            literature.
+                        </div>
+                        <div class="folder__details details">
+                            <span class="details__price">750</span>
+                            <button class="details__btn">Details</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="folder__place">
-            <div class="folder__photo"><img src="src/images/offer1.jpg" alt="" class="folder__img"></div>
-            <div class="folder__content">
-                <h3 class="folder__location">Rome, Italy</h3>
-                <div class="folder__rating"></div>
-                <div class="folder__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very
-                    popular during the renaissance. Passage and going through the cities of the world literature.
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="blog">
+            <h2 class="blog__hdl">Our Blog</h2>
+            <h3 class="blog__subhdl">An insight the incredible experience in the world</h3>
+            <div class="blog__blog-entry blog-entry">
+                <div class="blog-entry__photo">
+                    <img src="src/images/blog_photo.jpg" alt="A lighthouse in Italy" class="blog-entry__img">
                 </div>
-                <div class="folder__details details">
-                    <span class="details__price">750</span>
-                    <button class="details__btn">Details</button>
+                <div class="blog-entry__content">
+                    <h2 class="blog-entry__hdl">Beautiful Italy<br>Let's travel</h2>
+                    <p class="blog-entry__text">But I must explain to you all this mistaken idea of denouncing pleasure
+                        and
+                        praising pain was born and I will give you a complete account of the system and expound the
+                        actual
+                        teachings of the great explorer of the truth, the master- builder of human happiness. No one
+                        rejects,
+                        dislike, or avoids pleasure itself, because it is pleasure, but because rationally encounter
+                        consequences that are extremly painful. Nor again is there anyone who loves or pursues.</p>
+                    <span class="blog-entry__read-more">Read More</span></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="planners">
+            <div class="planners__start">
+                <div class="planners__hdl">Trip Planners</div>
+                <div class="planners__text">20 years from now you will be more disappointed by the things that you
+                    didn't
+                    do.
+                    Stop regretting and start travelling, start throwing off the bowlines.
+                </div>
+                <button class="planners__btn">View all trip plans</button>
+            </div>
+            <div class="planners__slider">
+                <div class="planners__slide"><img src="src/images/planners1.jpg" alt="Colosseum in the evening"
+                                                  class="planners__slide-img"></div>
+                <div class="planners__slide planners__slide--active"><img src="src/images/planners2.jpg"
+                                                                          alt="Eiffel tower in Autumn"
+                                                                          class="planners__slide-img"></div>
+                <div class="planners__slide"><img src="src/images/planners3.jpg" alt="Barcelona in the evening"
+                                                  class="planners__slide-img"></div>
+                <div class="planners__slide"><img src="src/images/planners4.jpg" alt="Cathedral in Germany"
+                                                  class="planners__slide-img"></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="gallery">
+            <h2 class="gallery__hdl">Destination Gallery</h2>
+            <div class="gallery__subhdl">
+                <p class="gallery__text">Our photo gallery on trip</p>
+                <nav class="gallery__nav">
+                    <img src="src/images/wide_arrow.svg" alt="Left-pointing arrow" class="gallery__nav-left">
+                    <img src="src/images/wide_arrow.svg" alt="Right-pointing arrow" class="gallery__nav-right">
+                </nav>
+            </div>
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="testimonial">
+            <h2 class="testimonial__hdl">Traveler's Experiences</h2>
+            <p class="testimonial__subhdl">Here some feedback from our travelers</p>
+            <div class="testimonial__slider">
+                <div class="testimonial__slide">
+                    <img src="src/images/testimonial1.png" alt="Avatar of the reviewer" class="testimonial__avatar">
+                    <p class="testimonial__review">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and praising pain was born and I will give you a complete account of the system of the truth,
+                        the
+                        master- builder of human happiness.</p>
+                    <div class="testimonial__rating"></div>
+                    <div class="testimonial__name">John Doe</div>
+                    <div class="testimonial__title">Accountant</div>
+                </div>
+                <div class="testimonial__slide">
+                    <img src="src/images/testimonial2.png" alt="Avatar of the reviewer" class="testimonial__avatar">
+                    <p class="testimonial__review">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and praising pain was born and I will give you a complete account of the system of the truth,
+                        the
+                        master- builder of human happiness.</p>
+                    <div class="testimonial__rating"></div>
+                    <div class="testimonial__name">John Smith</div>
+                    <div class="testimonial__title">Journalist, HWO News</div>
+                </div>
+                <div class="testimonial__slide">
+                    <img src="src/images/testimonial3.png" alt="Avatar of the reviewer" class="testimonial__avatar">
+                    <p class="testimonial__review">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and praising pain was born and I will give you a complete account of the system of the truth,
+                        the
+                        master- builder of human happiness.</p>
+                    <div class="testimonial__rating"></div>
+                    <div class="testimonial__name">Tamara Bellis</div>
+                    <div class="testimonial__title">Managing Director, JTH</div>
                 </div>
             </div>
-        </div>
+            <nav class="testimonial__nav">
+                <img src="src/images/wide_arrow.svg" alt="Left-pointing arrow" class="testimonial__nav-left">
+                <img src="src/images/wide_arrow.svg" alt="Right-pointing arrow" class="testimonial__nav-right">
+            </nav>
+        </section>
     </div>
-</section>
-
-<section class="blog">
-    <h2 class="blog__hdl">Our Blog</h2>
-    <h3 class="blog__subhdl">An insight the incredible experience in the world</h3>
-    <div class="blog__blog-entry blog-entry">
-        <div class="blog-entry__photo">
-            <img src="src/images/blog_photo.jpg" alt="A lighthouse in Italy" class="blog-entry__img">
-        </div>
-        <div class="blog-entry__content">
-            <h2 class="blog-entry__hdl">Beautiful Italy<br>Let's travel</h2>
-            <p class="blog-entry__text">But I must explain to you all this mistaken idea of denouncing pleasure and
-                praising pain was born and I will give you a complete account of the system and expound the actual
-                teachings of  the great explorer of the truth, the master- builder of human happiness. No one rejects,
-                dislike, or avoids pleasure itself, because it is pleasure, but because rationally encounter
-                consequences that are  extremly painful. Nor again is there anyone who loves or pursues.</p>
-            <span class="blog-entry__read-more">Read More</span></div>
-    </div>
-</section>
-
-<section class="planners">
-    <div class="planners__start">
-        <div class="planners__hdl">Trip Planners</div>
-        <div class="planners__text">20 years from now you will be more disappointed by the things that you didn't do.
-            Stop regretting and start travelling, start throwing off the bowlines.
-        </div>
-        <button class="planners__btn">View all trip plans</button>
-    </div>
-    <div class="planners__slider">
-        <div class="planners__slide"><img src="src/images/planners1.jpg" alt="Colosseum in the evening"
-                                          class="planners__slide-img"></div>
-        <div class="planners__slide planners__slide--active"><img src="src/images/planners2.jpg"
-                                                                  alt="Eiffel tower in Autumn"
-                                                                  class="planners__slide-img"></div>
-        <div class="planners__slide"><img src="src/images/planners3.jpg" alt="Barcelona in the evening"
-                                          class="planners__slide-img"></div>
-        <div class="planners__slide"><img src="src/images/planners4.jpg" alt="Cathedral in Germany"
-                                          class="planners__slide-img"></div>
-    </div>
-</section>
-
-<section class="gallery">
-    <h2 class="gallery__hdl">Destination Gallery</h2>
-    <div class="gallery__subhdl">
-        <p class="gallery__text">Our photo gallery on trip</p>
-        <nav class="gallery__nav">
-            <img src="src/images/wide_arrow.svg" alt="Left-pointing arrow" class="gallery__nav-left">
-            <img src="src/images/wide_arrow.svg" alt="Right-pointing arrow" class="gallery__nav-right">
-        </nav>
-    </div>
-</section>
-
-<section class="testimonial">
-    <h2 class="testimonial__hdl">Traveler's Experiences</h2>
-    <p class="testimonial__subhdl">Here some feedback from our travelers</p>
-    <div class="testimonial__slider">
-        <div class="testimonial__slide">
-            <img src="src/images/testimonial1.png" alt="Avatar of the reviewer" class="testimonial__avatar">
-            <p class="testimonial__review">But I must explain to you how all this mistaken idea of denouncing pleasure
-                and praising pain was born and I will give you a complete account of the system of the truth, the
-                master- builder of human happiness.</p>
-            <div class="testimonial__rating"></div>
-            <div class="testimonial__name">John Doe</div>
-            <div class="testimonial__title">Accountant</div>
-        </div>
-        <div class="testimonial__slide">
-            <img src="src/images/testimonial2.png" alt="Avatar of the reviewer" class="testimonial__avatar">
-            <p class="testimonial__review">But I must explain to you how all this mistaken idea of denouncing pleasure
-                and praising pain was born and I will give you a complete account of the system of the truth, the
-                master- builder of human happiness.</p>
-            <div class="testimonial__rating"></div>
-            <div class="testimonial__name">John Smith</div>
-            <div class="testimonial__title">Journalist, HWO News</div>
-        </div>
-        <div class="testimonial__slide">
-            <img src="src/images/testimonial3.png" alt="Avatar of the reviewer" class="testimonial__avatar">
-            <p class="testimonial__review">But I must explain to you how all this mistaken idea of denouncing pleasure
-                and praising pain was born and I will give you a complete account of the system of the truth, the
-                master- builder of human happiness.</p>
-            <div class="testimonial__rating"></div>
-            <div class="testimonial__name">Tamara Bellis</div>
-            <div class="testimonial__title">Managing Director, JTH</div>
-        </div>
-    </div>
-    <nav class="testimonial__nav">
-        <img src="src/images/wide_arrow.svg" alt="Left-pointing arrow" class="testimonial__nav-left">
-        <img src="src/images/wide_arrow.svg" alt="Right-pointing arrow" class="testimonial__nav-right">
-    </nav>
-</section>
-
-<div class="newsletter">
-    <h2 class="newsletter__hdl">Our Newsletter</h2>
-    <form class="newsletter__form">
-        <label class="newsletter__lbl" for="email">Email</label>
-        <input class="newsletter__email" type="email" id="email" name="email" placeholder="Enter your email">
-        <input type="button" value="Subscribe" class="newsletter__btn">
-    </form>
 </div>
+
+    <div class="newsletter">
+        <h2 class="newsletter__hdl">Our Newsletter</h2>
+        <form class="newsletter__form">
+            <label class="newsletter__lbl" for="email">Email</label>
+            <input class="newsletter__email" type="email" id="email" name="email" placeholder="Enter your email">
+            <input type="button" value="Subscribe" class="newsletter__btn">
+        </form>
+    </div>
+
 
 <footer class="footer">
     <div class="copyright">

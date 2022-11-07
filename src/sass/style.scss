@@ -6,7 +6,7 @@
     font-family: Rubik, sans-serif;
     font-weight: 400;
     font-size: toRem(20px);
-    line-height: toRem(24px);
+    line-height: math.div(20, 24);
     color: $primary-font-color;
     text-decoration: none;
     padding: toRem(10px);
@@ -14,7 +14,36 @@
     display: inline-block;
 }
 
-.intro {
+
+%hdl-typography {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: toRem(64px);
+    line-height: math.div(64, 85);
+    color: $tertiary-font-color;
+    text-decoration: none;
+}
+
+%subhdl-typography {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: toRem(24px);
+    line-height: math.div(24, 28);
+    color: $secondary-font-color;
+    text-decoration: none;
+    display: inline-block;
+}
+
+%footer-menu-item {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: toRem(18px);
+    line-height: math.div(18, 21);
+    color: $primary-font-color;
+    text-decoration: none;
+}
+
+.hero {
     background-image: url('#{$imgs-path}/bg_intro.jpg');
     background-position: center;
     background-size: cover;
