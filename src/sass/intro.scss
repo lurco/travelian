@@ -54,7 +54,7 @@
             bottom: toRem(6px);
             left: toRem(10px);
             display: block;
-            width: calc(100% - toRem(20px));
+            width: calc(100% - 1.25rem);
             height: toRem(3px);
         }
     }
@@ -240,18 +240,26 @@
     }
     &__slider {
         display: grid;
-        grid-template-columns: repeat(3, math.div(toRem($max-width-px),4)) ;
-        grid-template-rows: toRem(661px) ;
-    }
+        grid-template-columns: repeat(4, math.div(toRem($max-width-px),3)) ;
+        grid-template-rows: toRem(661px);
+        position: relative;
+        margin: 0;
+        padding: 0;    }
     &__slide {
         height: toRem(658px);
         width: toRem(497px);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        margin: 0;
+        padding: 0;
         &-img {
-            width: 100%;
+            width: math.div(toRem($max-width-px - 2 * 32px), 3);
             height: 100%;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            z-index: 0;
         }
         &-name {
             color: $primary-font-color;
@@ -259,12 +267,14 @@
             font-size: toRem(28px);
             font-weight: 500;
             line-height: 1.32;
+            z-index: 5;
         }
         &-location {
             color: $primary-font-color;
             font-family: Rubik, sans-serif;
             font-size: toRem(24px);
             font-weight: 400;
+            z-index: 5;
             &::before {
                 display: inline-block;
                 width: toRem(24px);
@@ -306,30 +316,7 @@
         display: flex;
         justify-content: space-between;
     }
-    &__nav {
-        display: flex;
-        justify-content: space-between;
-        width: toRem(171px);
-    }
-    &__nav-left {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $tertiary-color;
-        border-radius: 12px;
-        width: toRem(66px);
-        height: toRem(60px);
-    }
-    &__nav-right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $primary-color;
-        transform: rotate(180deg);
-        border-radius: 12px;
-        width: toRem(66px);
-        height: toRem(60px);
-    }
+
     &__text {
         color: $secondary-font-color;
         font-family: Rubik, sans-serif;
