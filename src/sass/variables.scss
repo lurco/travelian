@@ -1,6 +1,7 @@
 $base-font-size: 16px;
-$max-width-px: 1556px;
-$spacing-px: 32px;
+$short-space-px: 34px;
+$long-space-px: 99px;
+$full-width-px: $short-space-px * 11 + $long-space-px * 12;
 $imgs-path: '../images';
 $primary-font-color: #FFF;
 $secondary-font-color: #767E86;

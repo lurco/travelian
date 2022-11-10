@@ -9,9 +9,8 @@
     line-height: math.div(20, 24);
     color: $primary-font-color;
     text-decoration: none;
-    padding: toRem(10px);
-    margin: toRem(6px);
-    display: inline-block;
+    //padding: toRem(10px);
+    //margin: toRem(6px);
 }
 
 %hdl-typography {
@@ -30,7 +29,7 @@
     line-height: math.div(24, 28);
     color: $secondary-font-color;
     text-decoration: none;
-    display: inline-block;
+    //display: inline-block;
 }
 
 %footer-menu-item {
@@ -46,7 +45,7 @@
     background-image: url('#{$imgs-path}/bg_hero.jpg');
     background-position: center;
     background-size: cover;
-    padding-bottom: 150px;
+    //padding-bottom: 150px;
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: toRem($max-width-px);
+    max-width: toRem($full-width-px);
     width: 100%;
     margin: auto;
 }
@@ -102,7 +101,7 @@
 
 .lead {
     color: $primary-font-color;
-    max-width: toRem($max-width-px);
+    max-width: toRem($full-width-px);
     width: 100%;
     margin: auto;
 
@@ -124,7 +123,7 @@
 
 .search {
     width: 100%;
-    max-width: toRem(1556px);
+    max-width: toRem($full-width-px);
     margin: auto;
     position: relative;
 
@@ -140,7 +139,7 @@
 
     &__wrapper {
         background-color: $secondary-color;
-        max-width: toRem(1291px);
+        max-width: toRem($full-width-px - 2 * $short-space-px - 2 * $long-space-px);
         width: 100%;
         display: flex;
         align-items: center;
@@ -215,7 +214,7 @@
         //margin-inline: auto;
         margin: 0 auto 0;
         padding: 0;
-        max-width: toRem($max-width-px);
+        max-width: toRem($full-width-px);
     }
 }
 
@@ -262,7 +261,7 @@
             display: inline-block;
             content: "";
             height: 3px;
-            width: toRem(365px);
+            width: toRem($long-space-px*3 + $short-space-px*2);
             background-color: $primary-color;
             position: absolute;
             left: 0;
@@ -284,7 +283,7 @@
 
     .carousel {
         display: flex;
-        max-width: toRem($max-width-px) * 4.02/3;
+        max-width: toRem($full-width-px) * 4.02/3;
         width: 100vw * 4/3;
         justify-content: space-between;
         position: relative;
@@ -293,9 +292,9 @@
 
         &-item {
             max-height: toRem(661px);
-            max-width: math.div(toRem($max-width-px - 2 * $spacing-px), 3);
+            max-width: toRem($long-space-px*4 + $short-space-px*3);
             width: 30vw;
-            aspect-ratio: math.div(toRem($max-width-px - 2 * $spacing-px),3) / toRem(661px);
+            aspect-ratio: math.div($long-space-px*4 + $short-space-px*3, 661px);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -351,7 +350,7 @@
 }
 
 .offer {
-    max-width: toRem($max-width-px);
+    max-width: toRem($full-width-px);
     width: 100%;
     margin-top: toRem(299px);
     margin-inline: auto;
@@ -395,7 +394,7 @@
 
 
         &-item {
-            max-width: math.div(toRem($max-width-px - 2 * $spacing-px), 3);
+            max-width: toRem($long-space-px*4 + $short-space-px*3);
             width: 30vw;
             background-color: $offer-bg-color;
             border-radius: 30px;
@@ -409,12 +408,13 @@
                 aspect-ratio: 497/286;
                 margin: 0 0 0 0;
             }
+
             &__location {
                 font-family: Mulish, sans-serif;
                 color: $secondary-font-color;
                 font-weight: 400;
                 font-size: toRem(28px);
-                line-height: math.div(35,28);
+                line-height: math.div(35, 28);
                 margin: toRem(40px) toRem(24px) 0 toRem(24px);
             }
 
@@ -431,14 +431,16 @@
                 font-family: Rubik, sans-serif;
                 font-weight: 400;
                 font-size: toRem(18px);
-                line-height: math.div(21,18);
+                line-height: math.div(21, 18);
                 color: $tertiary-font-color;
             }
+
             .l-price-wrapper {
                 display: flex;
                 justify-content: space-between;
                 margin: 0 toRem(24px) toRem(38px) toRem(24px);
             }
+
             &__price {
                 display: flex;
                 align-items: center;
@@ -449,13 +451,14 @@
                 font-family: Rubik, sans-serif;
                 font-weight: 400;
                 font-size: toRem(20px);
-                line-height: math.div(24,20);
+                line-height: math.div(24, 20);
                 color: $secondary-font-color;
             }
+
             &__price-price {
                 font-family: Rubik, sans-serif;
                 font-size: toRem(40px);
-                line-height: math.div(47,40);
+                line-height: math.div(47, 40);
                 font-weight: 400;
                 color: $primary-color;
             }
@@ -466,7 +469,7 @@
                 text-transform: uppercase;
                 font-family: Rubik, sans-serif;
                 font-size: toRem(20px);
-                line-height: math.div(24,20);
+                line-height: math.div(24, 20);
                 font-weight: 400;
                 border: 0;
                 border-radius: 12px;
@@ -508,31 +511,36 @@
         margin: toRem(106px) 0 0 0;
 
         &__photo {
-            width: 50%;
+            width: toRem($long-space-px*6 + $short-space-px*5);
         }
+
         &__img {
             width: 100%;
             border-radius: 20px;
             filter: brightness(.8);
         }
+
         &__content {
-            width: 50%;
-            margin: 0 0 0 $spacing-px;
+            width: toRem($long-space-px*6 + $short-space-px*5);
+            margin: 0 0 0 $short-space-px;
         }
+
         &__hdl {
             font-family: "Playfair Display", serif;
             color: $tertiary-font-color;
             font-size: toRem(54px);
             font-weight: 400;
-            line-height: math.div(72,54);
+            line-height: math.div(72, 54);
         }
+
         &__text {
             font-family: Rubik, sans-serif;
             font-size: toRem(24px);
-            line-height: math.div(52,24);
+            line-height: math.div(52, 24);
             font-weight: 400;
             color: $tertiary-font-color;
         }
+
         &__read-more {
             display: flex;
             align-items: center;
@@ -540,44 +548,186 @@
             justify-content: space-between;
             font-family: Rubik, sans-serif;
             font-size: toRem(24px);
-            line-height: math.div(52,24);
+            line-height: math.div(52, 24);
             font-weight: 400;
             color: $primary-color;
-                &::after {
-                    content: "";
-                    display: inline-block;
-                    width: 40px;
-                    height: 27px;
-                    //background-image: url('#{$imgs-path}/arrow.svg');
-                    background-color: $primary-color;
-                    transform: scale(.6);
-                    -webkit-mask: url('#{$imgs-path}/arrow.svg') no-repeat;
-                    //mask: url('#{$imgs-path}/arrow.svg') no-repeat 50% 50%;
-                    -webkit-mask-size: contain;
-                    //mask-size: contain;
-                }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 40px;
+                height: 27px;
+                //background-image: url('#{$imgs-path}/arrow.svg');
+                background-color: $primary-color;
+                transform: scale(.6);
+                -webkit-mask: url('#{$imgs-path}/arrow.svg') no-repeat;
+                //mask: url('#{$imgs-path}/arrow.svg') no-repeat 50% 50%;
+                -webkit-mask-size: contain;
+                //mask-size: contain;
+            }
         }
     }
 
 }
 
 .planners {
-    &__start {
+    margin: toRem(355px) 0 0 0;
+    display: flex;
+    align-items: center;
+
+    .sidebar {
+        width: toRem($long-space-px*4 + $short-space-px*3);
+
+        &__hdl {
+            @extend %hdl-typography;
+            position: relative;
+            margin: 0 0 toRem(78px) 0;
+
+            &::after {
+                content: "";
+                background-color: $primary-color;
+                height: toRem(3px);
+                width: toRem($long-space-px*2 + $short-space-px);
+                left: 0;
+                bottom: - toRem(33px);
+                position: absolute;
+            }
+        }
+
+        &__txt {
+            font-family: Rubik, sans-serif;
+            font-weight: 400;
+            font-size: toRem(18px);
+            line-height: math.div(21, 18);
+            color: $secondary-font-color;
+        }
+
+        &__btn {
+            background-color: $primary-color;
+            font-family: Rubik, sans-serif;
+            font-weight: 400;
+            font-size: toRem(18px);
+            line-height: math.div(21, 18);
+            color: $primary-font-color;
+            padding: toRem(20px);
+            border: none;
+            border-radius: 15px;
+            position: static;
+            z-index: 5;
+        }
+
+        .l-btn-wrapper {
+            margin: toRem(54px) 268px 0 40px;
+            width: 186px;
+            display: inline-block;
+            position: relative;
+
+            &::before {
+                content: "";
+                background-color: $tertiary-color;
+                display: inline-block;
+                position: absolute;
+                width: toRem(43px);
+                height: toRem(43px);
+                z-index: -1;
+                top: -25%;
+                left: -10%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: $secondary-font-color;
+                display: inline-block;
+                width: toRem(43px);
+                height: toRem(43px);
+                z-index: -1;
+                bottom: -30%;
+                right: -10%;
+            }
+        }
+
     }
 
-    &__hdl {
-    }
+    .carousel {
+        display: inline-flex;
 
-    &__text {
-    }
+        &-item {
+            width: toRem($long-space-px*2 + $short-space-px*3);
+            margin: 0 toRem($short-space-px) 0 0;
+            transition: all 400ms;
 
-    &__btn {
-    }
+            &__img {
+                width: 100%;
+                border-radius: 30px;
+                filter: brightness(.8);
+            }
 
-    &__slider {
-    }
+            &:hover {
+                transform: translateY(-3rem);
 
-    &__slide-img {
+                .l-active-item {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .l-active-item {
+                transition: all 400ms;
+                visibility: hidden;
+                opacity: 0;
+                //position: absolute;
+
+                &-header {
+                    margin: toRem(21px) 0;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: Rubik, sans-serif;
+                    font-weight: 400;
+                    font-size: toRem(18px);
+                    line-height: math.div(21, 18);
+                    color: $tertiary-color;
+                }
+
+                &-footer {
+                    margin: toRem(21px) 0;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            &__hdl {
+                text-transform: uppercase;
+            }
+
+            &__price {
+            }
+
+            &__location {
+                font-family: "Playfair Display", serif;
+                font-weight: 600;
+                color: $tertiary-color;
+                font-size: toRem(28px);
+                line-height: math.div(37, 28);
+            }
+
+
+            &__rating {
+                background-image: url('#{$imgs-path}/rating_star.svg');
+                background-repeat: repeat-x;
+                height: 24px;
+                width: 5*27px;
+            }
+
+            &__details {
+                font-family: Rubik, sans-serif;
+                font-weight: 400;
+                font-size: toRem(18px);
+                line-height: math.div(21, 18);
+                color: $tertiary-color;
+            }
+
+        }
     }
 }
 
