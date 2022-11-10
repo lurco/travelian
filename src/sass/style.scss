@@ -486,6 +486,7 @@
     &__hdl {
         @extend %hdl-typography;
         position: relative;
+        margin: 0 0 toRem(68px) 0;
 
         &::after {
             position: absolute;
@@ -733,29 +734,57 @@
 
 .gallery {
     &__hdl {
-    }
-
-    &__subhdl {
+        @extend %hdl-typography;
+        position: relative;
+        margin: toRem(325px) 0 0 0;
+        &::after {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            background-color: $primary-color;
+            height: toRem(3px);
+            width: toRem(283px);
+            left: 0;
+            bottom: -32px;
+        }
     }
 
     &__text {
+        @extend %subhdl-typography;
+        margin: toRem(68px) 0 0 0;
     }
 
-    &__nav {
+    .l-subhdl-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 0 toRem(144px) 0;
     }
-
-    &__nav-left {
-    }
-
-    &__nav-right {
+    .carousel {
+        display: flex;
+        &-item {
+            width: toRem($long-space-px*3 + $short-space-px*2);
+            margin: 0 toRem($short-space-px) 0 0;
+            border-radius: 20px;
+            filter: brightness(.8);
+            transition: 200ms;
+            &:hover {
+                transform: translateY(-3rem);
+                cursor: pointer;
+            }
+        }
     }
 }
 
 .testimonial {
+    margin: toRem(344px) 0 0 0;
     &__hdl {
+        @extend %hdl-typography;
     }
 
     &__subhdl {
+        @extend %subhdl-typography;
     }
 
     &__slider {
