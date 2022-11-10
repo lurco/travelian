@@ -399,8 +399,8 @@
             width: 30vw;
             background-color: $offer-bg-color;
             border-radius: 30px;
-            height: toRem(629px);
-            max-height: 70vh;
+            //height: toRem(629px);
+            //max-height: 70vh;
             &__img {
                 border-top-right-radius: 30px;
                 border-top-left-radius: 30px;
@@ -414,7 +414,7 @@
                 color: $secondary-font-color;
                 font-weight: 400;
                 font-size: toRem(28px);
-                line-height: 35/28;
+                line-height: math.div(35,28);
                 margin: toRem(40px) toRem(24px) 0 toRem(24px);
             }
 
@@ -431,13 +431,13 @@
                 font-family: Rubik, sans-serif;
                 font-weight: 400;
                 font-size: toRem(18px);
-                line-height: 21/18;
+                line-height: math.div(21,18);
                 color: $tertiary-font-color;
             }
             .l-price-wrapper {
                 display: flex;
                 justify-content: space-between;
-                margin: 0 toRem(24px) toRem(28px) toRem(24px);
+                margin: 0 toRem(24px) toRem(38px) toRem(24px);
             }
             &__price {
                 display: flex;
@@ -449,13 +449,13 @@
                 font-family: Rubik, sans-serif;
                 font-weight: 400;
                 font-size: toRem(20px);
-                line-height: 24/20;
+                line-height: math.div(24,20);
                 color: $secondary-font-color;
             }
             &__price-price {
                 font-family: Rubik, sans-serif;
                 font-size: toRem(40px);
-                line-height: 47/40;
+                line-height: math.div(47,40);
                 font-weight: 400;
                 color: $primary-color;
             }
@@ -466,7 +466,7 @@
                 text-transform: uppercase;
                 font-family: Rubik, sans-serif;
                 font-size: toRem(20px);
-                line-height: 24/20;
+                line-height: math.div(24,20);
                 font-weight: 400;
                 border: 0;
                 border-radius: 12px;
@@ -478,35 +478,87 @@
 
 
 .blog {
-    margin: 100px;
+    margin: toRem(306px) 0 0 0;
+
     &__hdl {
+        @extend %hdl-typography;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $primary-color;
+            margin: 0;
+            padding: 0;
+            height: toRem(3px);
+            width: toRem(150px);
+            left: 0;
+            bottom: -32px;
+        }
     }
 
     &__subhdl {
+        @extend %subhdl-typography;
     }
 
-    &__blog-entry {
-    }
-}
+    .post {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: toRem(106px) 0 0 0;
 
-.blog-entry {
-    &__photo {
+        &__photo {
+            width: 50%;
+        }
+        &__img {
+            width: 100%;
+            border-radius: 20px;
+            filter: brightness(.8);
+        }
+        &__content {
+            width: 50%;
+            margin: 0 0 0 $spacing-px;
+        }
+        &__hdl {
+            font-family: "Playfair Display", serif;
+            color: $tertiary-font-color;
+            font-size: toRem(54px);
+            font-weight: 400;
+            line-height: math.div(72,54);
+        }
+        &__text {
+            font-family: Rubik, sans-serif;
+            font-size: toRem(24px);
+            line-height: math.div(52,24);
+            font-weight: 400;
+            color: $tertiary-font-color;
+        }
+        &__read-more {
+            display: flex;
+            align-items: center;
+            width: toRem(165px);
+            justify-content: space-between;
+            font-family: Rubik, sans-serif;
+            font-size: toRem(24px);
+            line-height: math.div(52,24);
+            font-weight: 400;
+            color: $primary-color;
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 40px;
+                    height: 27px;
+                    //background-image: url('#{$imgs-path}/arrow.svg');
+                    background-color: $primary-color;
+                    transform: scale(.6);
+                    -webkit-mask: url('#{$imgs-path}/arrow.svg') no-repeat;
+                    //mask: url('#{$imgs-path}/arrow.svg') no-repeat 50% 50%;
+                    -webkit-mask-size: contain;
+                    //mask-size: contain;
+                }
+        }
     }
 
-    &__img {
-    }
-
-    &__content {
-    }
-
-    &__hdl {
-    }
-
-    &__text {
-    }
-
-    &__read-more {
-    }
 }
 
 .planners {
