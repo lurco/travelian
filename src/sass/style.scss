@@ -14,7 +14,6 @@
     display: inline-block;
 }
 
-
 %hdl-typography {
     font-family: "Playfair Display", serif;
     font-weight: 400;
@@ -44,7 +43,7 @@
 }
 
 .hero {
-    background-image: url('#{$imgs-path}/bg_intro.jpg');
+    background-image: url('#{$imgs-path}/bg_hero.jpg');
     background-position: center;
     background-size: cover;
     padding-bottom: 150px;
@@ -207,17 +206,53 @@
     }
 }
 
-.destinations {
+.l-grid {
+    margin: 0;
+    padding: 0;
     max-width: toRem($max-width-px);
-    width: 100%;
+    &__item {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    width: toRem(171px);
+    margin: 0;
+    padding: 0;
+
+    &__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $tertiary-color;
+        border-radius: 12px;
+        width: toRem(66px);
+        height: toRem(60px);
+    }
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color;
+        transform: rotate(180deg);
+        border-radius: 12px;
+        width: toRem(66px);
+        height: toRem(60px);
+    }
+}
+.destinations {
     margin-top: toRem(160px);
-    margin-inline: auto;
+    //margin-inline: auto;
+    width: 100%;
+
     &__hdl {
-        color: $tertiary-font-color;
-        font-family: "Playfair Display", serif;
-        font-size: toRem(64px);
-        line-height: 100%;
-        font-weight: 400;
+        @extend %hdl-typography;
         position: relative;
         &::after {
             display: inline-block;
@@ -230,41 +265,15 @@
             bottom: -33px;
         }
     }
-    &__subhdl {
+    &l-subhdl-wrapper {
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
     &__text {
-        color: $secondary-font-color;
-        font-family: Rubik, sans-serif;
-        font-size: toRem(24px);
-        line-height: 100%;
-        font-weight: 400;
+        @extend %subhdl-typography;
     }
-    &__nav {
-        display: flex;
-        justify-content: space-between;
-        width: toRem(171px);
-    }
-    &__nav-left {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $tertiary-color;
-        border-radius: 12px;
-        width: toRem(66px);
-        height: toRem(60px);
-    }
-    &__nav-right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $primary-color;
-        transform: rotate(180deg);
-        border-radius: 12px;
-        width: toRem(66px);
-        height: toRem(60px);
-    }
+
     &__img {
     }
     &__slider {
