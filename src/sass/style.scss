@@ -207,22 +207,21 @@
 }
 
 .l-grid {
-    margin: 0;
-    padding: 0;
-    max-width: toRem($max-width-px);
+        overflow-y: hidden;
     &__item {
-        width: 100%;
-        margin: 0;
+        //margin-inline: auto;
+        margin: 0 auto 0;
         padding: 0;
+        max-width: toRem($max-width-px);
 
     }
 }
 
 .carousel-nav {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     width: toRem(171px);
-    margin: 0;
+    margin: 0 0 1.4rem;
     padding: 0;
 
     &__left {
@@ -254,6 +253,8 @@
     &__hdl {
         @extend %hdl-typography;
         position: relative;
+        margin: 0 0 0 0;
+
         &::after {
             display: inline-block;
             content: "";
@@ -265,61 +266,81 @@
             bottom: -33px;
         }
     }
-    &l-subhdl-wrapper {
+    .l-subhdl-wrapper {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+        margin: toRem(32px) 0 0 0;
     }
     &__text {
         @extend %subhdl-typography;
     }
 
-    &__img {
-    }
-    &__slider {
-        display: grid;
-        grid-template-columns: repeat(4, math.div(toRem($max-width-px),3)) ;
-        grid-template-rows: toRem(661px);
-        position: relative;
-        margin: 0;
-        padding: 0;    }
-    &__slide {
-        height: toRem(658px);
-        width: toRem(497px);
+    .carousel {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin: 0;
+        max-width: toRem($max-width-px) * 4.02/3;
+        width: 100vw * 4/3;
+        justify-content: space-between;
+        position: relative;
+        margin: toRem(76px) 0 0 0;
         padding: 0;
-        &-img {
-            width: math.div(toRem($max-width-px - 2 * 32px), 3);
-            height: 100%;
+
+        &-item {
+            max-height: toRem(661px);
+            max-width: math.div(toRem($max-width-px - 2 * $spacing-px),3);
+            width: 30vw;
+            aspect-ratio: math.div(toRem($max-width-px - 2 * $spacing-px),3) / toRem(661px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             margin: 0;
             padding: 0;
-            position: absolute;
-            z-index: 0;
-        }
-        &-name {
-            color: $primary-font-color;
-            font-family: "Playfair Display", serif;
-            font-size: toRem(28px);
-            font-weight: 500;
-            line-height: 1.32;
-            z-index: 5;
-        }
-        &-location {
-            color: $primary-font-color;
-            font-family: Rubik, sans-serif;
-            font-size: toRem(24px);
-            font-weight: 400;
-            z-index: 5;
-            &::before {
-                display: inline-block;
-                width: toRem(24px);
-                height: toRem(24px);
-                content: "";
-                background-image: url('#{$imgs-path}/location.svg');
-                background-size: cover;
+            border-radius: 50%;
+            position: relative;
+
+            &__img {
+                //width: math.div(toRem($max-width-px - 2 * 32px), 3);
+                border-radius: 5%;
+                filter: sepia(0.2);
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+            }
+
+            &__hdl {
+                color: $primary-font-color;
+                font-family: "Playfair Display", serif;
+                font-size: toRem(28px);
+                font-weight: 500;
+                line-height: 1.32;
+                z-index: 5;
+                margin: 0 2rem 0;
+            }
+
+            &__location {
+                display: flex;
+                //background-color: peru;
+                color: $primary-font-color;
+                font-family: Rubik, sans-serif;
+                font-size: toRem(24px);
+                font-weight: 400;
+                z-index: 5;
+                margin: 1rem 1rem 2rem;
+
+                &::before {
+                    //background-color: #000;
+                    display: inline-block;
+                    width: toRem(24px);
+                    height: toRem(24px);
+                    content: "";
+                    background-image: url('#{$imgs-path}/location.svg');
+                    background-position: center;
+                    background-size: cover;
+                    margin-inline: 1rem;
+                }
             }
         }
     }
@@ -328,7 +349,7 @@
 .offer {
     max-width: toRem($max-width-px);
     width: 100%;
-    margin-top: toRem(322px);
+    margin-top: toRem(299px);
     margin-inline: auto;
     &__hdl {
         color: $tertiary-font-color;
