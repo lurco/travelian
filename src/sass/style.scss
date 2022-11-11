@@ -32,9 +32,8 @@
     //display: inline-block;
 }
 
-%footer-menu-item {
+%footer-menu-typography {
     font-family: Rubik, sans-serif;
-    font-weight: 400;
     font-size: toRem(18px);
     line-height: math.div(18, 21);
     color: $primary-font-color;
@@ -208,7 +207,7 @@
 }
 
 .l-grid {
-    overflow-y: hidden;
+    overflow-x: hidden;
 
     &__item {
         //margin-inline: auto;
@@ -265,7 +264,7 @@
             background-color: $primary-color;
             position: absolute;
             left: 0;
-            bottom: -33px;
+            bottom: - toRem(33px);
         }
     }
 
@@ -737,6 +736,7 @@
         @extend %hdl-typography;
         position: relative;
         margin: toRem(325px) 0 0 0;
+
         &::after {
             display: inline-block;
             position: absolute;
@@ -761,14 +761,17 @@
         align-items: flex-end;
         margin: 0 0 toRem(144px) 0;
     }
+
     .carousel {
         display: flex;
+
         &-item {
             width: toRem($long-space-px*3 + $short-space-px*2);
             margin: 0 toRem($short-space-px) 0 0;
             border-radius: 20px;
             filter: brightness(.8);
             transition: 200ms;
+
             &:hover {
                 transform: translateY(-3rem);
                 cursor: pointer;
@@ -779,106 +782,238 @@
 
 .testimonial {
     margin: toRem(344px) 0 0 0;
+
     &__hdl {
         @extend %hdl-typography;
+        position: relative;
+
+        &:after {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            background-color: $primary-color;
+            height: toRem(3px);
+            width: toRem($long-space-px*3 + $short-space-px*2);
+            left: 0;
+            bottom: - toRem(33px);
+        }
     }
 
     &__subhdl {
+        margin: toRem(68px) 0 0 0;
         @extend %subhdl-typography;
     }
 
-    &__slider {
+    .carousel {
+        display: flex;
+        justify-content: space-between;
+        width: toRem($long-space-px*15 + $short-space-px*18);
+        margin: 0 0 toRem(160px) 0;
+
+        &-item {
+            border-radius: 10px;
+            background-color: $testimonial-bg-color;
+            width: toRem($long-space-px*5 + $short-space-px*5);
+            margin: toRem(166px) toRem($short-space-px) 0 0;
+            position: relative;
+            padding: toRem($short-space-px);
+
+            &__avatar {
+                border-radius: 50%;
+                position: absolute;
+                width: toRem($long-space-px);
+                left: toRem($short-space-px);
+                top: -4rem;
+            }
+
+            &__review {
+                margin: toRem(60px - $short-space-px) 0 0 0;
+                font-family: Rubik, sans-serif;
+                font-size: toRem(18px);
+                color: $secondary-font-color;
+                line-height: math.div(23, 18);
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            &__rating {
+                margin: toRem(20px) 0 0 0;
+                height: 24px;
+                width: 5*27px;
+                background-image: url('#{$imgs-path}/rating_star.svg');
+                background-repeat: repeat-x;
+                background-position: -3px 0;
+            }
+
+            &__name {
+                margin: toRem(20px) 0 0 0;
+                font-family: "Playfair Display", serif;
+                font-size: toRem(24px);
+                line-height: math.div(32, 24);
+                font-weight: 400;
+                color: $secondary-font-color;
+                text-decoration: none;
+            }
+
+            &__title {
+                margin: toRem(7px) 0 0 0;
+                font-family: Rubik, sans-serif;
+                font-size: toRem(18px);
+                line-height: math.div(21, 18);
+                font-weight: 400;
+                color: $secondary-font-color;
+                text-decoration: none;
+            }
+        }
     }
 
-    &__slide {
-    }
-
-    &__avatar {
-    }
-
-    &__review {
-    }
-
-    &__rating {
-    }
-
-    &__name {
-    }
-
-    &__title {
-    }
-
-    &__nav {
-    }
-
-    &__nav-left {
-    }
-
-    &__nav-right {
+    & .carousel-nav {
+        display: flex;
+        margin-left: auto;
     }
 }
 
 .newsletter {
+    background-color: $primary-font-color;
+    width: toRem($long-space-px*10 + $short-space-px*9);
+    margin-top: toRem(126px);
+    margin-bottom: -6rem;
+    margin-inline: auto;
+    border-radius: 26px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
     &__hdl {
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+        text-decoration: none;
+        color: $secondary-font-color;
+        font-size: toRem(64px);
+        line-height: math.div(85, 64);
     }
 
-    &__form {
+    .l-newsletter-wrapper {
+        padding: toRem(60px) 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
     &__lbl {
+        font-family: Rubik, sans-serif;
+        font-weight: 400;
+        color: $secondary-font-color;
+        font-size: toRem(20px);
+        line-height: math.div(24, 20);
+        text-decoration: none;
     }
 
     &__email {
+        margin: toRem(20px) toRem($short-space-px) 0 0;
+        font-family: Rubik, sans-serif;
+        font-size: toRem(20px);
+        font-weight: 400;
+        line-height: math.div(24, 20);
+        text-decoration: none;
+        color: $primary-color;
+        background-color: $form-bg-color;
+        border: none;
+        border-radius: 24px;
+        padding: toRem(24px) toRem(40px);
+
+        &::placeholder {
+            color: $primary-color;
+            text-align: left;
+        }
     }
 
     &__btn {
+        height: toRem(73px);
+        border: none;
+        background-color: $primary-color;
+        font-family: Rubik, sans-serif;
+        font-size: toRem(20px);
+        line-height: math.div(24, 20);
+        font-weight: 400;
+        text-decoration: none;
+        color: $primary-font-color;
+        padding: toRem(24px) toRem(40px);
+        border-radius: 12px;
     }
+
 }
 
 .footer {
-}
+    z-index: -1;
+    background-color: $tertiary-color;
+    margin: 0 0 0 0;
+    padding: toRem(240px) 0 toRem(100px) 0;
 
-.copyright {
-    &__logo {
-    }
+    .l-footer-wrapper {
+        margin-inline: auto;
+        max-width: $full-width-px;
+        display: flex;
+        justify-content: space-between;
 
-    &__text {
-    }
-}
+        .logo-copyright {
+            font-family: Rubik, sans-serif;
+            font-size: toRem(14px);
+            font-weight: 400;
+            line-height: math.div(17, 14);
+            color: $primary-font-color;
+            text-decoration: none;
+        }
 
-.footer-logo {
-    &__img {
-    }
-}
+        @extend %footer-menu-typography;
 
-.footer-menu {
-    &__hdl {
-    }
+        .footer-menu, .info, .social {
+            &__hdl {
+                font-weight: 500;
+            }
 
-    &__item {
-    }
-}
+            &__item {
+                font-weight: 400;
+                margin: 1rem 0;
+                cursor: pointer;
+                padding-inline: 2px;
+            }
 
-.footer-info {
-    &__hdl {
-    }
+            &__item:hover {
+                font-weight: 500;
+                padding-inline: 0;
+            }
 
-    &__item {
-    }
-}
+            &__img {
+                margin-right: 1rem;
+                cursor: pointer;
+            }
+        }
 
-.footer-contact {
-    &__hdl {
-    }
+        .contact {
+            &__hdl {
+                font-weight: 500;
+            }
 
-    &__item {
-    }
-}
-
-.footer-social {
-    &__hdl {
-    }
-
-    &__img {
+            &__item {
+                font-weight: 400;
+                margin: 1rem 0;
+            }
+            a {
+                @extend %footer-menu-typography;
+                font-weight: 400;
+            }
+            a:hover {
+                font-weight: 500;
+            }
+        }
     }
 }
