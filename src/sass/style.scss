@@ -67,20 +67,53 @@
 .main-menu {
     &__item {
         @extend %menu-item;
-    }
-
-    &__item--active, &__item:hover {
-        font-weight: 500;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        overflow: hidden;
         position: relative;
+        transition: all 100ms;
+
+
+        &::before {
+            content: attr(data-text);
+            transform: scale(1.1) translateY(-.1rem);
+            height: 0;
+            visibility: hidden;
+            pointer-events: none;
+            user-select: none;
+        }
 
         &::after {
+            transition: all 200ms;
+            transform: scale(1.1) translateY(-.1rem);
+            opacity: 0;
             content: '';
             background-color: $primary-color;
             position: absolute;
             bottom: toRem(6px);
-            left: toRem(10px);
+            left: toRem(16px);
             display: block;
-            width: calc(100% - 1.25rem);
+            width: calc(100% - 2rem);
+            height: toRem(3px);
+        }
+    }
+
+    &__item--active, &__item:hover {
+        transform: scale(1.1) translateY(-.1rem);
+        position: relative;
+
+
+        &::after {
+            opacity: 1;
+            content: '';
+            background-color: $primary-color;
+            position: absolute;
+            bottom: toRem(6px);
+            left: toRem(16px);
+            display: block;
+            width: calc(100% - 2rem);
             height: toRem(3px);
         }
     }
@@ -89,12 +122,38 @@
 .auth-menu {
     &__item {
         @extend %menu-item;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        overflow: hidden;
+        transition: all 100ms;
+
+        &::before {
+            content: attr(data-text);
+            transform: scale(1.1) translateY(-.1rem);
+            height: 0;
+            visibility: hidden;
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+
+    &__item--active, &__item:hover {
+        transform: scale(1.1) translateY(-.1rem);
+        position: relative;
     }
 
     &__item--btn {
         border-radius: toRem(12px);
         background-color: $primary-color;
         padding: toRem(20px) toRem(32px);
+        transition: all 200ms;
+
+        &:hover {
+            font-weight: 400;
+            transform: scale(1.2);
+        }
     }
 }
 
@@ -174,7 +233,11 @@
         border-left-width: 0;
         padding-bottom: toRem(10px);
         padding-top: toRem(10px);
-        border-bottom: 1px;
+        border-color: #000;
+        border-bottom: 2px solid;
+        &:focus, &::selection {
+            border: none;
+        }
     }
 
     &__btn {
@@ -202,6 +265,9 @@
             height: toRem(16px);
             position: absolute;
             right: toRem(18px);
+        }
+        &:hover {
+            transform: scale(1.1);
         }
     }
 }
@@ -282,8 +348,8 @@
 
     .carousel {
         display: flex;
-        max-width: toRem($full-width-px) * 4.02/3;
-        width: 100vw * 4/3;
+        max-width: toRem($full-width-px) * math.div(4.02,3);
+        width: 100vw * math.div(4,3);
         justify-content: space-between;
         position: relative;
         margin: toRem(76px) 0 0 0;
@@ -978,13 +1044,31 @@
         .footer-menu, .info, .social {
             &__hdl {
                 font-weight: 500;
+                font-size: toRem(24px);
+                line-height: math.div(24, 28);
             }
 
             &__item {
                 font-weight: 400;
-                margin: 1rem 0;
                 cursor: pointer;
-                padding-inline: 2px;
+                padding: .5rem 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+
+                &::after {
+                    font-weight: 500;
+                    content: attr(data-text);
+                    left: 0;
+                    top: 0;
+                    height: 0;
+                    visibility: hidden;
+                    user-select: none;
+                    pointer-events: none;
+                    @media speech {
+                        display: none;
+                    }
+                }
             }
 
             &__item:hover {
@@ -995,22 +1079,39 @@
             &__img {
                 margin-right: 1rem;
                 cursor: pointer;
+                transition: all 400ms;
+
+                &[src*="pinterest"] {
+                    transform: translateY(10%);
+                }
+
+                &:hover {
+                    filter: brightness(.8);
+                }
             }
         }
 
         .contact {
             &__hdl {
                 font-weight: 500;
+                font-size: toRem(24px);
+                line-height: math.div(24, 28);
             }
 
             &__item {
                 font-weight: 400;
-                margin: 1rem 0;
+                cursor: pointer;
+                padding: .5rem 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
             }
+
             a {
                 @extend %footer-menu-typography;
                 font-weight: 400;
             }
+
             a:hover {
                 font-weight: 500;
             }
