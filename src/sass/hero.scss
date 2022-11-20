@@ -80,6 +80,9 @@
             height: toRem(3px);
         }
     }
+    &__item:not(&__item--active) {
+        cursor: pointer;
+    }
 }
 
 .auth-menu {
