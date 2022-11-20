@@ -78,6 +78,7 @@
         padding: toRem(24px) toRem(40px);
         border-radius: 12px;
         cursor: pointer;
+        transition: all 200ms;
         &:hover {
             transform: scale(1.1);
         }
