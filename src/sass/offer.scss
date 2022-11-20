@@ -1,0 +1,138 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.offer {
+    max-width: toRem($full-width-px);
+    width: 100%;
+    margin-top: toRem(299px);
+    margin-inline: auto;
+
+    &__hdl {
+        @extend %hdl-typography;
+        position: relative;
+        text-align: right;
+        margin: 0 0 0 0;
+
+        &::after {
+            display: inline-block;
+            content: "";
+            height: 3px;
+            width: toRem(241px);
+            background-color: $primary-color;
+            position: absolute;
+            right: 0;
+            bottom: -33px;
+        }
+    }
+
+    .l-offer-subhdl {
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: toRem(40px) 0 (toRem(100px) - 1.4rem) 0;
+    }
+
+    &__text {
+        @extend %subhdl-typography;
+    }
+
+    .carousel {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+
+
+        &-item {
+            max-width: toRem($long-space-px*4 + $short-space-px*3);
+            width: 30vw;
+            background-color: $offer-bg-color;
+            border-radius: 30px;
+            //height: toRem(629px);
+            //max-height: 70vh;
+            &__img {
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+                filter: sepia(0.2);
+                width: 100%;
+                aspect-ratio: 497/286;
+                margin: 0 0 0 0;
+            }
+
+            &__location {
+                font-family: Mulish, sans-serif;
+                color: $secondary-font-color;
+                font-weight: 400;
+                font-size: toRem(28px);
+                line-height: math.div(35, 28);
+                margin: toRem(40px) toRem(24px) 0 toRem(24px);
+            }
+
+            &__rating {
+                height: 24px;
+                width: 5 * 27px;
+                background-image: url(../images/rating_star.svg);
+                background-repeat: repeat-x;
+                margin: toRem(5px) toRem(24px) toRem(27px) toRem(24px);
+            }
+
+            &__desc {
+                margin: 0 toRem(24px) toRem(28px) toRem(24px);
+                font-family: Rubik, sans-serif;
+                font-weight: 400;
+                font-size: toRem(18px);
+                line-height: math.div(21, 18);
+                color: $tertiary-font-color;
+            }
+
+            .l-price-wrapper {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 toRem(24px) toRem(38px) toRem(24px);
+            }
+
+            &__price {
+                display: flex;
+                align-items: center;
+            }
+
+            &__price-from {
+                margin: 0 toRem(12px) 0 0;
+                font-family: Rubik, sans-serif;
+                font-weight: 400;
+                font-size: toRem(20px);
+                line-height: math.div(24, 20);
+                color: $secondary-font-color;
+            }
+
+            &__price-price {
+                font-family: Rubik, sans-serif;
+                font-size: toRem(40px);
+                line-height: math.div(47, 40);
+                font-weight: 400;
+                color: $primary-color;
+            }
+
+            &__btn {
+                background-color: $primary-color;
+                color: $primary-font-color;
+                text-transform: uppercase;
+                font-family: Rubik, sans-serif;
+                font-size: toRem(20px);
+                line-height: math.div(24, 20);
+                font-weight: 400;
+                border: 0;
+                border-radius: 12px;
+                padding: toRem(20px) toRem(40px);
+                cursor: pointer;
+                transition: all 200ms;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

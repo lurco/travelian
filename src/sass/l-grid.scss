@@ -1,0 +1,14 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.l-grid {
+    overflow-x: hidden;
+
+    &__item {
+        //margin-inline: auto;
+        margin: 0 auto 0;
+        padding: 0;
+        max-width: toRem($full-width-px);
+    }
+}

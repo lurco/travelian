@@ -1,0 +1,86 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.newsletter {
+    background-color: $primary-font-color;
+    width: toRem($long-space-px*10 + $short-space-px*9);
+    margin-top: toRem(126px);
+    margin-bottom: -6rem;
+    margin-inline: auto;
+    border-radius: 26px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    &__hdl {
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+        text-decoration: none;
+        color: $secondary-font-color;
+        font-size: toRem(64px);
+        line-height: math.div(85, 64);
+    }
+
+    .l-newsletter-wrapper {
+        padding: toRem(60px) 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__lbl {
+        font-family: Rubik, sans-serif;
+        font-weight: 400;
+        color: $secondary-font-color;
+        font-size: toRem(20px);
+        line-height: math.div(24, 20);
+        text-decoration: none;
+    }
+
+    &__email {
+        margin: toRem(20px) toRem($short-space-px) 0 0;
+        font-family: Rubik, sans-serif;
+        font-size: toRem(20px);
+        font-weight: 400;
+        line-height: math.div(24, 20);
+        text-decoration: none;
+        color: $primary-color;
+        background-color: $form-bg-color;
+        border: none;
+        border-radius: 24px;
+        padding: toRem(24px) toRem(40px);
+
+        &::placeholder {
+            color: $primary-color;
+            text-align: left;
+        }
+    }
+
+    &__btn {
+        height: toRem(73px);
+        border: none;
+        background-color: $primary-color;
+        font-family: Rubik, sans-serif;
+        font-size: toRem(20px);
+        line-height: math.div(24, 20);
+        font-weight: 400;
+        text-decoration: none;
+        color: $primary-font-color;
+        padding: toRem(24px) toRem(40px);
+        border-radius: 12px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+}

@@ -1,0 +1,42 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.carousel-nav {
+    display: inline-flex;
+    justify-content: space-between;
+    width: toRem(171px);
+    margin: 0 0 1.4rem;
+    padding: 0;
+
+    &__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $tertiary-color;
+        border-radius: 12px;
+        width: toRem(66px);
+        height: toRem(60px);
+        cursor: pointer;
+        transition: all 200ms;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-color;
+        transform: rotate(180deg);
+        border-radius: 12px;
+        width: toRem(66px);
+        height: toRem(60px);
+        cursor: pointer;
+        //transition: all 200ms;
+        &:hover {
+            transform: rotate(180deg) scale(1.1);
+        }
+    }
+}

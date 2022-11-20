@@ -1,3 +1,6 @@
+@use "sass:math";
+@import "helpers";
+
 $base-font-size: 16px;
 $short-space-px: 34px;
 $long-space-px: 99px;
@@ -16,4 +19,42 @@ $form-bg-color: #ffe8d4;
 
 html, body {
   font-size: $base-font-size;
+}
+
+%menu-item {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: toRem(20px);
+  line-height: math.div(20, 24);
+  color: $primary-font-color;
+  text-decoration: none;
+  //padding: toRem(10px);
+  //margin: toRem(6px);
+}
+
+%hdl-typography {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: toRem(64px);
+  line-height: math.div(64, 85);
+  color: $tertiary-font-color;
+  text-decoration: none;
+}
+
+%subhdl-typography {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: toRem(24px);
+  line-height: math.div(24, 28);
+  color: $secondary-font-color;
+  text-decoration: none;
+  //display: inline-block;
+}
+
+%footer-menu-typography {
+  font-family: Rubik, sans-serif;
+  font-size: toRem(18px);
+  line-height: math.div(18, 21);
+  color: $primary-font-color;
+  text-decoration: none;
 }

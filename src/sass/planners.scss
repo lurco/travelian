@@ -1,0 +1,168 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.planners {
+    margin: toRem(355px) 0 0 0;
+    display: flex;
+    align-items: center;
+
+    .sidebar {
+        width: toRem($long-space-px*4 + $short-space-px*3);
+
+        &__hdl {
+            @extend %hdl-typography;
+            position: relative;
+            margin: 0 0 toRem(78px) 0;
+
+            &::after {
+                content: "";
+                background-color: $primary-color;
+                height: toRem(3px);
+                width: toRem($long-space-px*2 + $short-space-px);
+                left: 0;
+                bottom: - toRem(33px);
+                position: absolute;
+            }
+        }
+
+        &__txt {
+            font-family: Rubik, sans-serif;
+            font-weight: 400;
+            font-size: toRem(18px);
+            line-height: math.div(21, 18);
+            color: $secondary-font-color;
+        }
+
+        &__btn {
+            background-color: $primary-color;
+            font-family: Rubik, sans-serif;
+            font-weight: 400;
+            font-size: toRem(18px);
+            line-height: math.div(21, 18);
+            color: $primary-font-color;
+            padding: toRem(20px);
+            border: none;
+            border-radius: 15px;
+            position: static;
+            z-index: 5;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .l-btn-wrapper {
+            margin: toRem(54px) 268px 0 40px;
+            width: 186px;
+            display: inline-block;
+            position: relative;
+
+            &::before {
+                content: "";
+                background-color: $tertiary-color;
+                display: inline-block;
+                position: absolute;
+                width: toRem(43px);
+                height: toRem(43px);
+                z-index: -1;
+                top: -25%;
+                left: -10%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: $secondary-font-color;
+                display: inline-block;
+                width: toRem(43px);
+                height: toRem(43px);
+                z-index: -1;
+                bottom: -30%;
+                right: -10%;
+            }
+        }
+
+    }
+
+    .carousel {
+        display: inline-flex;
+
+        &-item {
+            width: toRem($long-space-px*2 + $short-space-px*3);
+            margin: 0 toRem($short-space-px) 0 0;
+            transition: all 400ms;
+
+            &__img {
+                width: 100%;
+                border-radius: 30px;
+                filter: brightness(.8);
+            }
+
+            &:hover {
+                transform: translateY(-3rem);
+
+                .l-active-item {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .l-active-item {
+                transition: all 400ms;
+                visibility: hidden;
+                opacity: 0;
+                //position: absolute;
+
+                &-header {
+                    margin: toRem(21px) 0;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: Rubik, sans-serif;
+                    font-weight: 400;
+                    font-size: toRem(18px);
+                    line-height: math.div(21, 18);
+                    color: $tertiary-color;
+                }
+
+                &-footer {
+                    margin: toRem(21px) 0;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            &__hdl {
+                text-transform: uppercase;
+            }
+
+            &__price {
+            }
+
+            &__location {
+                font-family: "Playfair Display", serif;
+                font-weight: 600;
+                color: $tertiary-color;
+                font-size: toRem(28px);
+                line-height: math.div(37, 28);
+            }
+
+
+            &__rating {
+                background-image: url('#{$imgs-path}/rating_star.svg');
+                background-repeat: repeat-x;
+                height: 24px;
+                width: 5*27px;
+            }
+
+            &__details {
+                font-family: Rubik, sans-serif;
+                font-weight: 400;
+                font-size: toRem(18px);
+                line-height: math.div(21, 18);
+                color: $tertiary-color;
+            }
+
+        }
+    }
+}

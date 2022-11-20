@@ -1,0 +1,103 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.blog {
+    margin: toRem(306px) 0 0 0;
+
+    &__hdl {
+        @extend %hdl-typography;
+        position: relative;
+        margin: 0 0 toRem(68px) 0;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $primary-color;
+            margin: 0;
+            padding: 0;
+            height: toRem(3px);
+            width: toRem(150px);
+            left: 0;
+            bottom: -32px;
+        }
+    }
+
+    &__subhdl {
+        @extend %subhdl-typography;
+    }
+
+    .post {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: toRem(106px) 0 0 0;
+
+        &__photo {
+            width: toRem($long-space-px*6 + $short-space-px*5);
+        }
+
+        &__img {
+            width: 100%;
+            border-radius: 20px;
+            filter: brightness(.8);
+        }
+
+        &__content {
+            width: toRem($long-space-px*6 + $short-space-px*5);
+            margin: 0 0 0 $short-space-px;
+        }
+
+        &__hdl {
+            font-family: "Playfair Display", serif;
+            color: $tertiary-font-color;
+            font-size: toRem(54px);
+            font-weight: 400;
+            line-height: math.div(72, 54);
+        }
+
+        &__text {
+            font-family: Rubik, sans-serif;
+            font-size: toRem(24px);
+            line-height: math.div(52, 24);
+            font-weight: 400;
+            color: $tertiary-font-color;
+        }
+
+        &__read-more {
+            display: flex;
+            align-items: center;
+            width: toRem(165px);
+            justify-content: space-between;
+            font-family: Rubik, sans-serif;
+            font-size: toRem(24px);
+            line-height: math.div(52, 24);
+            font-weight: 400;
+            color: $primary-color;
+            cursor: pointer;
+            transition: all 100ms;
+            &:hover {
+                transform: translateY(-.3rem);
+                transition: all 100ms;
+                &::after {
+                    transform: translateX(.5rem);
+                }
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 40px;
+                height: 27px;
+                //background-image: url('#{$imgs-path}/arrow.svg');
+                background-color: $primary-color;
+                transform: scale(.6);
+                -webkit-mask: url('#{$imgs-path}/arrow.svg') no-repeat;
+                //mask: url('#{$imgs-path}/arrow.svg') no-repeat 50% 50%;
+                -webkit-mask-size: contain;
+                //mask-size: contain;
+            }
+        }
+    }
+
+}

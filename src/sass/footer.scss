@@ -1,0 +1,109 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.footer {
+    z-index: -1;
+    background-color: $tertiary-color;
+    margin: 0 0 0 0;
+    padding: toRem(240px) 0 toRem(100px) 0;
+
+    .l-footer-wrapper {
+        margin-inline: auto;
+        max-width: $full-width-px;
+        display: flex;
+        justify-content: space-between;
+
+        .logo-copyright {
+            font-family: Rubik, sans-serif;
+            font-size: toRem(14px);
+            font-weight: 400;
+            line-height: math.div(17, 14);
+            color: $primary-font-color;
+            text-decoration: none;
+            &__logo {
+                margin: toRem(32px) 0 toRem(15px) 0;
+            }
+        }
+
+        @extend %footer-menu-typography;
+
+        .footer-menu, .info, .social {
+            &__hdl {
+                font-weight: 500;
+                font-size: toRem(24px);
+                line-height: math.div(24, 28);
+                margin-bottom: toRem(15px);
+                //margin-top: toRem(25px);
+            }
+
+            &__item {
+                font-weight: 400;
+                cursor: pointer;
+                padding: .5rem 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+
+                &::after {
+                    font-weight: 500;
+                    content: attr(data-text);
+                    left: 0;
+                    top: 0;
+                    height: 0;
+                    visibility: hidden;
+                    user-select: none;
+                    pointer-events: none;
+                    @media speech {
+                        display: none;
+                    }
+                }
+            }
+
+            &__item:hover {
+                font-weight: 500;
+                padding-inline: 0;
+            }
+
+            &__img {
+                margin-right: 1rem;
+                cursor: pointer;
+                transition: all 400ms;
+
+                &[src*="pinterest"] {
+                    transform: translateY(10%);
+                }
+
+                &:hover {
+                    filter: brightness(.8);
+                }
+            }
+        }
+
+        .contact {
+            &__hdl {
+                font-weight: 500;
+                font-size: toRem(24px);
+                line-height: math.div(24, 28);
+            }
+
+            &__item {
+                font-weight: 400;
+                cursor: pointer;
+                padding: .5rem 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+
+            a {
+                @extend %footer-menu-typography;
+                font-weight: 400;
+            }
+
+            a:hover {
+                font-weight: 500;
+            }
+        }
+    }
+}

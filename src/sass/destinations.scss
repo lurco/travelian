@@ -1,0 +1,110 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.destinations {
+    margin-top: toRem(160px);
+    //margin-inline: auto;
+    width: 100%;
+
+    &__hdl {
+        @extend %hdl-typography;
+        position: relative;
+        margin: 0 0 0 0;
+
+        &::after {
+            display: inline-block;
+            content: "";
+            height: 3px;
+            width: toRem($long-space-px*3 + $short-space-px*2);
+            background-color: $primary-color;
+            position: absolute;
+            left: 0;
+            bottom: - toRem(33px);
+        }
+    }
+
+    .l-subhdl-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: toRem(32px) 0 0 0;
+    }
+
+    &__text {
+        @extend %subhdl-typography;
+    }
+
+    .carousel {
+        display: flex;
+        max-width: toRem($full-width-px) * math.div(4.02,3);
+        width: 100vw * math.div(4,3);
+        justify-content: space-between;
+        position: relative;
+        margin: toRem(76px) 0 0 0;
+        padding: 0;
+
+        &-item {
+            max-height: toRem(661px);
+            max-width: toRem($long-space-px*4 + $short-space-px*3);
+            width: 30vw;
+            aspect-ratio: math.div($long-space-px*4 + $short-space-px*3, 661px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            transition: all 200ms;
+            cursor: pointer;
+            &:hover {
+                filter: sepia(50%);
+            }
+
+            &__img {
+                //width: math.div(toRem($max-width-px - 2 * 32px), 3);
+                border-radius: 30px;
+                filter: sepia(0.2);
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+            }
+
+            &__hdl {
+                color: $primary-font-color;
+                font-family: "Playfair Display", serif;
+                font-size: toRem(28px);
+                font-weight: 500;
+                line-height: 1.32;
+                z-index: 5;
+                margin: 0 2rem 0;
+            }
+
+            &__location {
+                display: flex;
+                //background-color: peru;
+                color: $primary-font-color;
+                font-family: Rubik, sans-serif;
+                font-size: toRem(24px);
+                font-weight: 400;
+                z-index: 5;
+                margin: 1rem 1rem 2rem;
+
+                &::before {
+                    //background-color: #000;
+                    display: inline-block;
+                    width: toRem(24px);
+                    height: toRem(24px);
+                    content: "";
+                    background-image: url('#{$imgs-path}/location.svg');
+                    background-position: center;
+                    background-size: cover;
+                    margin-inline: 1rem;
+                }
+            }
+        }
+    }
+}
