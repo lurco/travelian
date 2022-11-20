@@ -24,19 +24,22 @@
         }
     }
 
+    .right-btn__img {
+        transform: rotate(180deg);
+    }
+
     &__right {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: $primary-color;
-        transform: rotate(180deg);
         border-radius: 12px;
         width: toRem(66px);
         height: toRem(60px);
         cursor: pointer;
-        //transition: all 200ms;
+        transition: all 200ms;
         &:hover {
-            transform: rotate(180deg) scale(1.1);
+            transform: scale(1.1);
         }
     }
 }
