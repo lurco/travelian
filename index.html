@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang=" ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Playfair+Display:wght@400;500;600&family=Rubik:wght@400;500&display=swap"
+          rel="stylesheet">
+    <title>Travellian</title>
+  <script async type="module" crossorigin src="https://lurco.github.io/travelian/assets/index-6F3hq9O7.js"></script>
+  <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+  <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+</head>
+<body>
+
+<section class="hero">
+    <header class="hero__header header">
+        <a href="./" class="header__logo logo">
+            <img src="https://lurco.github.io/travelian/assets/logo-DEAcbplM.svg" alt="Travellian logo"
+                 class="logo__img"></a>
+        <nav class="header__menu main-menu">
+            <a href="" class="main-menu__item main-menu__item--active" data-text="Home">Home</a>
+            <a href="" class="main-menu__item" data-text="Explore">Explore</a>
+            <a href="" class="main-menu__item" data-text="Travel">Travel</a>
+            <a href="" class="main-menu__item" data-text="Blog">Blog</a>
+            <a href="" class="main-menu__item" data-text="Pricing">Pricing</a>
+        </nav>
+        <nav class="header__menu auth-menu">
+            <a href="" class="auth-menu__item" data-text="Login">Login</a>
+            <a href="" class="auth-menu__item auth-menu__item--btn" data-text="Sign up">Sign up</a>
+        </nav>
+    </header>
+    <div class="lead">
+        <h1 class="lead__hdl">Start your unforgettable<br> journey with us</h1>
+        <p class="lead__text">The best travel for your journey begins now</p>
+    </div>
+
+    <form action="" class="search">
+        <div class="search__wrapper">
+            <div class="search__group">
+                <label for="destination" class="search__lbl">Destination</label>
+                <input type="text" id="destination" name="destination" class="search__input" placeholder="Dubai">
+            </div>
+            <div class="search__group">
+                <label for="person" class="search__lbl">Person</label>
+                <select id="person" name="person" class="search__input">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="search__group">
+                <label for="checkin" class="search__lbl">Check In</label>
+                <input type="date" id="checkin" name="checkin" class="search__input">
+            </div>
+            <div class="search__group">
+                <label for="checkout" class="search__lbl">Check Out</label>
+                <input type="date" id="checkout" name="checkout" class="search__input">
+            </div>
+            <button type="submit" class="search__btn">
+                <span class="l-search-btn-wrapper" data-text="Book">Book<br>Now</span></button>
+        </div>
+    </form>
+
+</section>
+
+<div class="l-grid">
+    <div class="l-grid__item">
+        <section class="destinations">
+            <h2 class="destinations__hdl">Popular Destinations</h2>
+
+            <div class="l-subhdl-wrapper">
+                <h3 class="destinations__text">Most popular destinations around the world, from historical places to
+                    natural
+                    wonders.</h3>
+                <nav class="carousel-nav">
+                    <div class="carousel-nav__left left-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                  alt="Left-pointing arrow"
+                                                                  class="left-btn__img">
+                    </div>
+                    <div class="carousel-nav__right right-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                    alt="Right-pointing arrow"
+                                                                    class="right-btn__img">
+                    </div>
+                </nav>
+            </div>
+
+            <div class="destinations__carousel carousel">
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/destination1-C2kIqZ8Q.jpg" alt="" class="carousel-item__img">
+                    <h3 class="carousel-item__hdl">Monument of Berlin</h3>
+                    <p class="carousel-item__location">Berlin, Germany</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/destination2-COrwnuLf.jpg" alt="" class="carousel-item__img">
+                    <h3 class="carousel-item__hdl">Millenium Bridge</h3>
+                    <p class="carousel-item__location">London, United Kingdom</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/destination3-BzGTxYjw.jpg" alt="" class="carousel-item__img">
+                    <h3 class="carousel-item__hdl">Rialto Bridge</h3>
+                    <p class="carousel-item__location">Venice, Italy</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/destination4-C6X3qx0k.jpg" alt="" class="carousel-item__img">
+                    <h3 class="carousel-item__hdl">Sea of Orange Tiles</h3>
+                    <p class="carousel-item__location">Lisbon, Portugal</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="offer">
+            <h2 class="offer__hdl">Special Offer</h2>
+            <div class="l-offer-subhdl">
+                <nav class="carousel-nav">
+                    <div class="carousel-nav__left left-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                  alt="Left-pointing arrow"
+                                                                  class="left-btn__img">
+                    </div>
+                    <div class="carousel-nav__right right-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                    alt="Right-pointing arrow"
+                                                                    class="right-btn__img">
+                    </div>
+                </nav>
+                <h3 class="offer__text">Check out our special offer and discounts</h3>
+            </div>
+            <div class="offer__carousel carousel">
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/offer1-DdLnKJIq.jpg" alt="" class="carousel-item__img">
+                    <h3 class="carousel-item__location">Lisbon, Portugal</h3>
+                    <div class="carousel-item__rating"></div>
+                    <div class="carousel-item__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+                        Very popular during the renaissance. Passage and going through the cities of the world
+                        literature.
+                    </div>
+                    <div class="l-price-wrapper">
+                  <span class="carousel-item__price">
+                            <span class="carousel-item__price-from">From</span>
+                            <span class="carousel-item__price-price">&euro;500</span>
+                        </span>
+                        <button class="carousel-item__btn">Details</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/offer2-BEZVxieD.jpg" alt="" class="carousel-item__img">
+                    <h3 class="carousel-item__location">Athens, Greece</h3>
+                    <div class="carousel-item__rating"></div>
+                    <div class="carousel-item__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+                        Very popular during the renaissance. Passage and going through the cities of the world
+                        literature.
+                    </div>
+                    <div class="l-price-wrapper">
+                        <span class="carousel-item__price">
+                            <span class="carousel-item__price-from">From</span>
+                            <span class="carousel-item__price-price">&euro;800</span>
+                        </span>
+                        <button class="carousel-item__btn">Details</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/offer3-DAQCXDm0.jpg" alt="" class="carousel-item__img">
+                    <h3 class="carousel-item__location">Rome, Italy</h3>
+                    <div class="carousel-item__rating"></div>
+                    <div class="carousel-item__desc">5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+                        Very popular during the renaissance. Passage and going through the cities of the world
+                        literature.
+                    </div>
+                    <div class="l-price-wrapper">
+                 <span class="carousel-item__price">
+                            <span class="carousel-item__price-from">From</span>
+                            <span class="carousel-item__price-price">&euro;750</span>
+                        </span>
+                        <button class="carousel-item__btn">Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="blog">
+            <h2 class="blog__hdl">Our Blog</h2>
+            <h3 class="blog__subhdl">An insight the incredible experience in the world</h3>
+            <article class="blog__post post">
+                <div class="post__photo">
+                    <img src="https://lurco.github.io/travelian/assets/blog_photo-C17MKT6H.jpg" alt="A lighthouse in Italy" class="post__img">
+                </div>
+                <div class="post__content">
+                    <h2 class="post__hdl">Beautiful Italy<br>Let's travel</h2>
+                    <p class="post__text">But I must explain to you all this mistaken idea of denouncing pleasure
+                        and praising pain was born and I will give you a complete account of the system and expound the
+                        actual teachings of the great explorer of the truth, the master- builder of human happiness. No
+                        one rejects, dislike, or avoids pleasure itself, because it is pleasure, but because rationally
+                        encounter consequences that are extremly painful. Nor again is there anyone who loves or
+                        pursues.</p>
+                    <span class="post__read-more">Read More</span>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="planners">
+            <div class="planners__sidebar sidebar">
+                <div class="sidebar__hdl">Trip Planners</div>
+                <div class="sidebar__txt">20 years from now you will be more disappointed by the things that you
+                    didn't
+                    do.
+                    Stop regretting and start travelling, start throwing off the bowlines.
+                </div>
+                <div class="l-btn-wrapper">
+                    <button class="sidebar__btn">View all trip plans</button>
+                </div>
+            </div>
+            <div class="planners__carousel carousel">
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/planners1-DMsOBJmU.jpg"
+                         alt="Colosseum in the evening"
+                         class="carousel-item__img">
+                    <div class="l-active-item">
+                        <div class="l-active-item-header">
+                            <span class="carousel-item__hdl">Guided tour</span>
+                            <span class="carousel-item__price">&euro;120/Day</span>
+                        </div>
+                        <div class="carousel-item__location">Rome City Tour</div>
+                        <div class="l-active-item-footer">
+                            <span class="carousel-item__rating"></span>
+                            <span class="carousel-item__details">7 Days tour</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-active-item">
+                    <div class="carousel-item">
+                        <img src="https://lurco.github.io/travelian/assets/planners2-CeoOQPTr.jpg"
+                             alt="Eiffel tower in Autumn"
+                             class="carousel-item__img">
+                        <div class="l-active-item">
+                            <div class="l-active-item-header">
+                                <span class="carousel-item__hdl">Guided tour</span>
+                                <span class="carousel-item__price">&euro;99/Day</span>
+                            </div>
+                            <div class="carousel-item__location">Paris City Tour</div>
+                            <div class="l-active-item-footer">
+                                <span class="carousel-item__rating"></span>
+                                <span class="carousel-item__details">7 Days tour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/planners3-C_hGTHZL.jpg"
+                         alt="Nightlife in Barcelona"
+                         class="carousel-item__img">
+                    <div class="l-active-item">
+                        <div class="l-active-item-header">
+                            <span class="carousel-item__hdl">Guided tour</span>
+                            <span class="carousel-item__price">&euro;89/Day</span>
+                        </div>
+                        <div class="carousel-item__location">Barcelona City Tour</div>
+                        <div class="l-active-item-footer">
+                            <span class="carousel-item__rating"></span>
+                            <span class="carousel-item__details">7 Days tour</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/planners4-XHEsexrA.jpg"
+                         alt="Cathedral in Germany"
+                         class="carousel-item__img">
+                    <div class="l-active-item">
+                        <div class="l-active-item-header">
+                            <span class="carousel-item__hdl">Guided tour</span>
+                            <span class="carousel-item__price">&euro;79/Day</span>
+                        </div>
+                        <div class="carousel-item__location">Wittenberg City Tour</div>
+                        <div class="l-active-item-footer">
+                            <span class="carousel-item__rating"></span>
+                            <span class="carousel-item__details">7 Days tour</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="gallery">
+            <h2 class="gallery__hdl">Destination Gallery</h2>
+            <div class="l-subhdl-wrapper">
+                <p class="gallery__text">Our photo gallery on trip</p>
+                <nav class="carousel-nav">
+                    <div class="carousel-nav__left left-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                  alt="Left-pointing arrow"
+                                                                  class="left-btn__img">
+                    </div>
+                    <div class="carousel-nav__right right-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                    alt="Right-pointing arrow"
+                                                                    class="right-btn__img">
+                    </div>
+                </nav>
+            </div>
+            <div class="gallery__carousel carousel">
+                <img src="https://lurco.github.io/travelian/assets/gallery1-DDPlg7zE.jpg"
+                     alt="A man standing on a staircase"
+                     class="carousel-item">
+                <img src="https://lurco.github.io/travelian/assets/gallery2-EbWzAyMo.jpg"
+                     alt="Two lovers at a sunset near an ocean"
+                     class="carousel-item">
+                <img
+                        src="https://lurco.github.io/travelian/assets/gallery3-Bpr7XvVj.jpg"
+                        alt="A woman touring a narrow street"
+                        class="carousel-item">
+                <img
+                        src="https://lurco.github.io/travelian/assets/gallery4-BuL4ov1z.jpg"
+                        alt="A man on a train-track"
+                        class="carousel-item">
+            </div>
+        </section>
+    </div>
+
+    <div class="l-grid__item">
+        <section class="testimonial">
+            <h2 class="testimonial__hdl">Traveler's Experiences</h2>
+            <p class="testimonial__subhdl">Here some awesome feedback from our travelers</p>
+            <div class="testimonial__carousel carousel">
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/testimonial1-BOb81azc.png" alt="Avatar of the reviewer" class="carousel-item__avatar">
+                    <p class="carousel-item__review">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and praising pain was born and I will give you a complete account of the system of the truth,
+                        the
+                        master- builder of human happiness.</p>
+                    <div class="carousel-item__rating"></div>
+                    <div class="carousel-item__name">John Doe</div>
+                    <div class="carousel-item__title">Accountant</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/testimonial2-kX9snMri.png" alt="Avatar of the reviewer" class="carousel-item__avatar">
+                    <p class="carousel-item__review">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and praising pain was born and I will give you a complete account of the system of the truth,
+                        the
+                        master- builder of human happiness.</p>
+                    <div class="carousel-item__rating"></div>
+                    <div class="carousel-item__name">John Smith</div>
+                    <div class="carousel-item__title">Journalist, HWO News</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://lurco.github.io/travelian/assets/testimonial3-C5u89XVk.png" alt="Avatar of the reviewer" class="carousel-item__avatar">
+                    <p class="carousel-item__review">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and praising pain was born and I will give you a complete account of the system of the truth,
+                        the
+                        master- builder of human happiness.</p>
+                    <div class="carousel-item__rating"></div>
+                    <div class="carousel-item__name">Tamara Bellis</div>
+                    <div class="carousel-item__title">Managing Director, JTH</div>
+                </div>
+            </div>
+            <nav class="carousel-nav">
+                <div class="carousel-nav__left left-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                              alt="Left-pointing arrow"
+                                                              class="left-btn__img">
+                </div>
+                <div class="carousel-nav__right right-btn"><img src="data:image/svg+xml,%3csvg%20width='12'%20height='22'%20viewBox='0%200%2012%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%201L1%2011L11%2021'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                alt="Right-pointing arrow"
+                                                                class="right-btn__img">
+                </div>
+            </nav>
+        </section>
+    </div>
+</div>
+
+<form action="" class="newsletter">
+    <h2 class="newsletter__hdl">Our Newsletter</h2>
+    <div class="l-newsletter-wrapper">
+        <div class="newsletter__group">
+            <label class="newsletter__lbl" for="email">Email</label>
+            <input class="newsletter__email" type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+        <input type="button" value="Subscribe" class="newsletter__btn">
+    </div>
+</form>
+
+
+<footer class="footer">
+    <div class="l-footer-wrapper">
+        <div class="logo-copyright">
+            <img src="https://lurco.github.io/travelian/assets/logo-DEAcbplM.svg" alt="Travellian logo" class="logo-copyright__logo">
+            <div class="logo-copyright__copyright">
+                Copyright &#169; Travellian 2020 All rights reserved
+            </div>
+        </div>
+        <nav class="footer-menu">
+            <h4 class="footer-menu__hdl" data-text="Menu">Menu</h4>
+            <div class="footer-menu__item" data-text="Home">Home</div>
+            <div class="footer-menu__item" data-text="Explore">Explore</div>
+            <div class="footer-menu__item" data-text="Travel">Travel</div>
+            <div class="footer-menu__item" data-text="Blog">Blog</div>
+            <div class="footer-menu__item" data-text="Pricing">Pricing</div>
+        </nav>
+        <nav class="info">
+            <h4 class="info__hdl" data-text="Information">Information</h4>
+            <div class="info__item" data-text="Destinations">Destinations</div>
+            <div class="info__item" data-text="Supports">Supports</div>
+            <div class="info__item" data-text="Terms & Conditions">Terms & Conditions</div>
+            <div class="info__item" data-text="Privacy">Privacy</div>
+        </nav>
+        <nav class="contact">
+            <h4 class="contact__hdl" data-text="Contact Info">Contact Info</h4>
+            <div class="contact__item" data-text="+123 456 789">+123 456 789</div>
+            <div class="contact__item" data-text="info@travellian.com"><a href="">info@travellian.com</a></div>
+            <div class="contact__item" data-text="1245, New Yourk, USA">1245, New Yourk, USA</div>
+        </nav>
+        <nav class="social">
+            <h4 class="social__hdl">Follow us on</h4>
+            <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M15.9489%200.484863C18.8335%200.51778%2021.4394%201.22672%2023.7667%202.61169C26.0662%203.96902%2027.9791%205.89358%2029.3224%208.20136C30.6989%2010.5427%2031.4036%2013.1644%2031.4364%2016.0665C31.3547%2020.0374%2030.1022%2023.4288%2027.6791%2026.241C25.256%2029.0531%2022.1526%2030.7928%2018.9399%2031.4598V20.3268H21.9772L22.6641%2015.9518H18.0649V13.0863C18.0394%2012.4923%2018.2272%2011.9087%2018.5945%2011.4411C18.9623%2010.9722%2019.61%2010.7258%2020.5376%2010.7018H23.3149V6.86941C23.2751%206.85659%2022.8969%206.80589%2022.1805%206.71731C21.3681%206.62225%2020.551%206.57147%2019.733%206.56521C17.8817%206.57375%2016.4175%207.09599%2015.3405%208.13192C14.2634%209.16756%2013.7133%2010.6659%2013.6899%2012.627V15.9518H10.1899V20.3268H13.6899V31.4598C9.74526%2030.7928%206.64181%2029.0531%204.21869%2026.241C1.79556%2023.4288%200.543188%2020.0374%200.461426%2016.0665C0.494138%2013.1643%201.1988%2010.5425%202.5754%208.20136C3.9187%205.89359%205.83158%203.96902%208.13113%202.61169C10.4584%201.22699%2013.0643%200.518047%2015.9489%200.484863Z'%20fill='white'/%3e%3c/svg%3e" alt="Facebook icon" class="social__img">
+            <img src="data:image/svg+xml,%3csvg%20width='42'%20height='42'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M35.9999%2020.48C36.2399%2011.32%2028.8799%203.87997%2019.7599%203.99997C10.9999%204.11997%203.91994%2011.36%203.99994%2020.12C4.03994%2026.4%207.71994%2031.8%2012.9999%2034.4C13.3199%2034.56%2013.6799%2034.32%2013.6399%2033.96C13.5999%2032.92%2013.6399%2031.84%2013.8399%2030.96C14.0399%2030.08%2014.8399%2026.72%2015.3599%2024.52C15.5999%2023.44%2015.6399%2022.32%2015.4399%2021.24C15.3599%2020.88%2015.3199%2020.48%2015.3199%2020C15.3199%2017.64%2016.6799%2015.88%2018.3999%2015.88C19.8399%2015.88%2020.5599%2016.96%2020.5599%2018.28C20.5599%2019.72%2019.6399%2021.92%2019.1599%2023.96C18.7599%2025.64%2019.9999%2027.04%2021.6799%2027.04C24.7199%2027.04%2027.0399%2023.84%2027.0399%2019.24C27.0399%2015.16%2024.1199%2012.32%2019.9199%2012.32C15.0799%2012.32%2012.2399%2015.96%2012.2399%2019.72C12.2399%2021.2%2012.7999%2022.76%2013.5199%2023.6C13.6399%2023.76%2013.6799%2023.92%2013.6399%2024.08C13.5199%2024.6%2013.2399%2025.76%2013.1599%2026C13.0799%2026.32%2012.9199%2026.36%2012.5999%2026.24C10.4799%2025.2%209.11994%2022.08%209.11994%2019.6C9.11994%2014.24%2012.9999%209.31997%2020.3599%209.31997C26.2399%209.31997%2030.8399%2013.52%2030.8399%2019.16C30.8399%2025.04%2027.1599%2029.72%2021.9999%2029.72C20.6399%2029.72%2019.3599%2029.16%2018.5999%2028.4C18.3599%2028.16%2017.9599%2028.28%2017.8799%2028.6C17.5999%2029.6%2017.1999%2031.28%2017.0399%2031.8C16.7999%2032.76%2016.2799%2033.88%2015.7199%2034.88C15.5599%2035.12%2015.7199%2035.48%2015.9999%2035.52C17.3199%2035.84%2018.6799%2036.04%2020.0799%2036C28.5599%2035.92%2035.7599%2028.88%2035.9999%2020.48Z'%20fill='white'/%3e%3c/svg%3e" alt="Pinterest icon" class="social__img">
+            <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_11_748)'%3e%3cpath%20d='M16.3149%2031.9999C16.209%2031.9999%2016.103%2031.9999%2015.9963%2031.9994C13.488%2032.0055%2011.1704%2031.9418%208.9165%2031.8046C6.8501%2031.6789%204.96387%2030.9648%203.46143%2029.7397C2.01172%2028.5575%201.02173%2026.9591%200.519043%2024.9894C0.081543%2023.2746%200.0583496%2021.5912%200.0361328%2019.963C0.0200195%2018.7948%200.00341797%2017.4106%200%2016.0028C0.00341797%2014.5893%200.0200195%2013.205%200.0361328%2012.0368C0.0583496%2010.4088%200.081543%208.7255%200.519043%207.01041C1.02173%205.04068%202.01172%203.44229%203.46143%202.26016C4.96387%201.03507%206.8501%200.320955%208.91675%200.195223C11.1707%200.0582598%2013.4888%20-0.00570501%2016.0024%200.000398507C18.5115%20-0.00497259%2020.8284%200.0582598%2023.0823%200.195223C25.1487%200.320955%2027.0349%201.03507%2028.5373%202.26016C29.9873%203.44229%2030.977%205.04068%2031.4797%207.01041C31.9172%208.72525%2031.9404%2010.4088%2031.9626%2012.0368C31.9788%2013.205%2031.9956%2014.5893%2031.9988%2015.997V16.0028C31.9956%2017.4106%2031.9788%2018.7948%2031.9626%2019.963C31.9404%2021.591%2031.9175%2023.2743%2031.4797%2024.9894C30.977%2026.9591%2029.9873%2028.5575%2028.5373%2029.7397C27.0349%2030.9648%2025.1487%2031.6789%2023.0823%2031.8046C20.9238%2031.9359%2018.7065%2031.9999%2016.3149%2031.9999ZM15.9963%2029.4994C18.4639%2029.5053%2020.7295%2029.443%2022.9304%2029.3092C24.4929%2029.2143%2025.8477%2028.7072%2026.9575%2027.8022C27.9834%2026.9655%2028.6899%2025.8112%2029.0574%2024.3712C29.4216%2022.9438%2029.4426%2021.411%2029.4629%2019.9289C29.4788%2018.7685%2029.4954%2017.394%2029.4988%2015.9999C29.4954%2014.6056%2029.4788%2013.2314%2029.4629%2012.071C29.4426%2010.5888%2029.4216%209.05606%2029.0574%207.62833C28.6899%206.18839%2027.9834%205.03409%2026.9575%204.19742C25.8477%203.29263%2024.4929%202.78555%2022.9304%202.69058C20.7295%202.55655%2018.4639%202.49478%2016.0022%202.50015C13.5352%202.49429%2011.2693%202.55655%209.06836%202.69058C7.50586%202.78555%206.15112%203.29263%205.04126%204.19742C4.01538%205.03409%203.30884%206.18839%202.94141%207.62833C2.57715%209.05606%202.55615%2010.5885%202.53589%2012.071C2.52002%2013.2323%202.50342%2014.6076%202.5%2016.0028C2.50342%2017.392%202.52002%2018.7675%202.53589%2019.9289C2.55615%2021.411%202.57715%2022.9438%202.94141%2024.3712C3.30884%2025.8112%204.01538%2026.9655%205.04126%2027.8022C6.15112%2028.7069%207.50586%2029.214%209.06836%2029.309C11.2693%2029.443%2013.5356%2029.5055%2015.9963%2029.4994ZM15.9368%2023.8124C11.6291%2023.8124%208.12427%2020.3078%208.12427%2015.9999C8.12427%2011.692%2011.6291%208.18741%2015.9368%208.18741C20.2446%208.18741%2023.7493%2011.692%2023.7493%2015.9999C23.7493%2020.3078%2020.2446%2023.8124%2015.9368%2023.8124ZM15.9368%2010.6874C13.0076%2010.6874%2010.6243%2013.0707%2010.6243%2015.9999C10.6243%2018.9291%2013.0076%2021.3124%2015.9368%2021.3124C18.8662%2021.3124%2021.2493%2018.9291%2021.2493%2015.9999C21.2493%2013.0707%2018.8662%2010.6874%2015.9368%2010.6874ZM24.6243%205.68741C23.5889%205.68741%2022.7493%206.52676%2022.7493%207.56241C22.7493%208.59805%2023.5889%209.43741%2024.6243%209.43741C25.6599%209.43741%2026.4993%208.59805%2026.4993%207.56241C26.4993%206.52676%2025.6599%205.68741%2024.6243%205.68741Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_11_748'%3e%3crect%20width='32'%20height='32'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Instagram icon" class="social__img">
+            <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M28.768%208.0641C27.808%208.4801%2026.816%208.7681%2025.76%208.8961C26.848%208.2561%2027.68%207.2321%2028.064%205.9841C27.04%206.5921%2025.92%207.0081%2024.736%207.2641C23.776%206.2401%2022.4%205.6001%2020.896%205.6001C17.984%205.6001%2015.648%207.9681%2015.648%2010.8481C15.648%2011.2641%2015.68%2011.6481%2015.776%2012.0321C11.424%2011.8401%207.58397%209.7281%204.99197%206.5601C3.13597%209.8881%205.21597%2012.6401%206.59197%2013.5681C5.75997%2013.5681%204.92797%2013.3121%204.22397%2012.9281C4.22397%2015.5201%206.04797%2017.6641%208.41597%2018.1441C7.90397%2018.3041%206.75197%2018.4001%206.04797%2018.2401C6.71997%2020.3201%208.67197%2021.8561%2010.944%2021.8881C9.15197%2023.2961%206.52797%2024.4161%203.16797%2024.0641C5.50397%2025.5681%208.25597%2026.4321%2011.232%2026.4321C20.896%2026.4321%2026.144%2018.4321%2026.144%2011.5201C26.144%2011.2961%2026.144%2011.0721%2026.112%2010.8481C27.2%2010.0481%2028.096%209.1201%2028.768%208.0641Z'%20fill='white'/%3e%3c/svg%3e" alt="Twitter icon" class="social__img">
+        </nav>
+    </div>
+</footer>
+  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="https://lurco.github.io/travelian/assets/polyfills-legacy-2sCW12LV.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="https://lurco.github.io/travelian/assets/index-legacy-thrsW4a0.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+</body>
+</html>
