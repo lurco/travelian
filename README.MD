@@ -6,6 +6,10 @@ A [SASS](https://sass-lang.com/) implementation of a
 [free Figma template](https://www.figma.com/proto/mFO8spewXCSeREs5gw1YI4/Travellian---Travel-Agency-Landing-Page-(Community)?node-id=101%3A3971).
 The website is written in HTML and stylizes with SASS in accordance to the BEM methodology.
 
+The project is deployed using GitHub Pages under this link:
+
+[https://lurco.github.io/travelian/](https://lurco.github.io/travelian/)
+
 ## Screenshots
 
 ![hero.png](screenshots%2Fhero.png)
