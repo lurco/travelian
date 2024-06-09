@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/lurco/travelian/issues"
   },
-  "homepage": "https://github.com/lurco/travelian#readme",
   "devDependencies": {
     "@vitejs/plugin-legacy": "^5.4.1",
     "gh-pages": "^6.1.1",
@@ -29,3 +28,4 @@
     "vite": "^5.2.13"
   }
 }
+

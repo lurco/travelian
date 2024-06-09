@@ -4,4 +4,6 @@ src/css/*
 
 .DS_Store
 
+build
 node_modules
+
